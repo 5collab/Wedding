@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Nikah Invitation</title>
+<title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Cinzel:wght@400;600&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -14,365 +14,521 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-}
-
-html{
 scroll-behavior:smooth;
 }
 
 body{
+background:#faf8f5;
 font-family:'Poppins',sans-serif;
-background:#f7f4ef;
 overflow-x:hidden;
-color:#333;
+color:#444;
 }
 
-/* ---------- FIRST PAGE ---------- */
+/* Floating Sparkles */
+
+.sparkles{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+overflow:hidden;
+z-index:0;
+}
+
+.sparkles span{
+position:absolute;
+width:6px;
+height:6px;
+background:#d4af37;
+border-radius:50%;
+animation:float 10s linear infinite;
+opacity:.6;
+}
+
+.sparkles span:nth-child(1){left:10%;animation-delay:0s;}
+.sparkles span:nth-child(2){left:25%;animation-delay:2s;}
+.sparkles span:nth-child(3){left:45%;animation-delay:5s;}
+.sparkles span:nth-child(4){left:65%;animation-delay:1s;}
+.sparkles span:nth-child(5){left:80%;animation-delay:4s;}
+.sparkles span:nth-child(6){left:92%;animation-delay:7s;}
+
+@keyframes float{
+
+0%{
+transform:translateY(100vh) scale(0);
+opacity:0;
+}
+
+20%{
+opacity:.7;
+}
+
+100%{
+transform:translateY(-100px) scale(1.5);
+opacity:0;
+}
+
+}
+
+/* Tap Screen */
 
 #cover{
+
 height:100vh;
-width:100%;
-position:relative;
 display:flex;
 justify-content:center;
 align-items:center;
-background:
-linear-gradient(rgba(255,255,255,.88),rgba(255,255,255,.88)),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1600&auto=format&fit=crop");
-background-size:cover;
-background-position:center;
+flex-direction:column;
+background:linear-gradient(135deg,#fff,#fdf6ef);
+
+cursor:pointer;
+transition:1s;
+position:relative;
+z-index:5;
+
 }
 
-.corner{
-position:absolute;
-width:180px;
-opacity:.18;
-}
+#cover h1{
 
-.top-left{
-top:0;
-left:0;
-transform:rotate(180deg);
-}
-
-.bottom-right{
-right:0;
-bottom:0;
-}
-
-.card{
-width:90%;
-max-width:420px;
-background:rgba(255,255,255,.55);
-backdrop-filter:blur(8px);
-padding:40px 25px;
-border-radius:22px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.08);
-animation:fadeIn 1.2s;
-}
-
-.logo{
 font-family:'Cinzel',serif;
-font-size:78px;
-font-weight:600;
-letter-spacing:5px;
-color:#3a3a3a;
+font-size:42px;
+color:#8b1e3f;
+letter-spacing:3px;
+
+}
+
+#cover p{
+
+margin-top:20px;
+font-size:18px;
+animation:pulse 1.5s infinite;
+color:#777;
+
+}
+
+@keyframes pulse{
+
+0%{opacity:.4;}
+50%{opacity:1;}
+100%{opacity:.4;}
+
+}
+
+/* Invitation */
+
+#invitation{
+
+display:none;
+animation:openBook 1.2s ease;
+
+}
+
+@keyframes openBook{
+
+from{
+transform:rotateY(-90deg);
+opacity:0;
+}
+
+to{
+transform:rotateY(0);
+opacity:1;
+}
+
+}
+
+.container{
+
+max-width:900px;
+margin:auto;
+padding:40px 25px;
+text-align:center;
+position:relative;
+z-index:2;
+
+}
+
+.arabic{
+
+font-family:'Amiri',serif;
+font-size:42px;
+color:#8b1e3f;
+margin-bottom:20px;
+
+}
+
+.title{
+
+font-family:'Cinzel',serif;
+font-size:50px;
+color:#8b1e3f;
+margin-bottom:20px;
+
+}
+
+.text{
+
+font-size:20px;
+line-height:1.9;
+margin-bottom:40px;
+
 }
 
 .names{
-margin-top:18px;
-font-size:24px;
-letter-spacing:3px;
-font-family:'Cinzel',serif;
+
+font-family:'Cormorant Garamond',serif;
+font-size:65px;
+font-weight:700;
+color:#8b1e3f;
+animation:goldGlow 3s infinite;
+
 }
 
-.date{
-margin-top:15px;
-font-size:18px;
-letter-spacing:2px;
-color:#7b5a3d;
+.and{
+
+font-size:55px;
+margin:15px 0;
+color:#c89b3c;
+
 }
 
-.line{
-width:70px;
-height:2px;
-background:#d6b57d;
-margin:18px auto;
-}
+@keyframes goldGlow{
 
-.dua{
-font-size:18px;
-color:#8d2b45;
-line-height:1.8;
-margin-top:15px;
-font-family:'Noto Naskh Arabic',serif;
-}
+0%{text-shadow:0 0 5px #d4af37;}
 
-.open-btn{
-margin-top:35px;
-display:inline-block;
-padding:14px 38px;
-border:1px solid #d4b07b;
-border-radius:40px;
-text-decoration:none;
-font-size:15px;
-letter-spacing:3px;
-color:#7b5a3d;
-transition:.4s;
-cursor:pointer;
+50%{text-shadow:0 0 20px gold;}
+
+100%{text-shadow:0 0 5px #d4af37;}
+
+}
+  .card{
+
 background:white;
+border-radius:25px;
+padding:35px;
+margin:35px 0;
+box-shadow:0 10px 35px rgba(0,0,0,.08);
+animation:fadeUp 1s ease;
+transition:.4s;
+
 }
 
-.open-btn:hover{
-background:#d4b07b;
-color:white;
-transform:scale(1.05);
+.card:hover{
+
+transform:translateY(-8px);
+
 }
 
-@keyframes fadeIn{
+@keyframes fadeUp{
+
 from{
 opacity:0;
-transform:translateY(30px);
+transform:translateY(40px);
 }
+
 to{
 opacity:1;
 transform:translateY(0);
 }
+
 }
 
-/* -------- MAIN INVITATION -------- */
+.sectionTitle{
 
-#main{
-display:none;
-min-height:100vh;
-background:white;
-padding:40px 20px;
-animation:fadeIn 1s;
+font-family:'Cinzel',serif;
+font-size:34px;
+color:#8b1e3f;
+margin-bottom:25px;
+
+}
+
+.detail{
+
+font-size:20px;
+line-height:2;
+color:#555;
+
+}
+
+.highlight{
+
+color:#8b1e3f;
+font-weight:600;
+
+}
+
+.button{
+
+display:inline-block;
+margin-top:30px;
+padding:15px 38px;
+background:#8b1e3f;
+color:white;
+text-decoration:none;
+border-radius:50px;
+font-size:18px;
+transition:.4s;
+
+}
+
+.button:hover{
+
+background:#b68b2e;
+transform:scale(1.05);
+
+}
+
+.flower{
+
+position:absolute;
+font-size:50px;
+opacity:.12;
+animation:rotateFlower 15s linear infinite;
+
+}
+
+.f1{
+top:40px;
+left:20px;
+}
+
+.f2{
+top:40px;
+right:20px;
+}
+
+.f3{
+bottom:40px;
+left:20px;
+}
+
+.f4{
+bottom:40px;
+right:20px;
+}
+
+@keyframes rotateFlower{
+
+from{
+transform:rotate(0deg);
+}
+
+to{
+transform:rotate(360deg);
+}
+
+}
+
+footer{
+
+margin:60px 0 30px;
+font-size:16px;
+color:#777;
+
+}
+
+@media(max-width:768px){
+
+.names{
+
+font-size:46px;
+
 }
 
 .title{
-text-align:center;
-font-size:38px;
-font-family:'Cinzel',serif;
-margin-top:30px;
-color:#8d2b45;
-}
 
-.subtitle{
-text-align:center;
-margin-top:15px;
-font-size:18px;
-color:#666;
-}
-  /* ---------- INVITATION CONTENT ---------- */
-
-.section{
-max-width:800px;
-margin:auto;
-text-align:center;
-padding:50px 20px;
-animation:fadeIn 1s;
-}
-
-.bismillah{
 font-size:34px;
-color:#8d2b45;
-margin-bottom:20px;
-font-family:'Cinzel',serif;
+
 }
 
-.invite-text{
+.arabic{
+
+font-size:34px;
+
+}
+
+.text{
+
 font-size:18px;
-line-height:1.9;
-color:#555;
-margin-bottom:35px;
+
 }
 
-.names-big{
-font-size:42px;
-font-family:'Cinzel',serif;
-color:#8d2b45;
-line-height:1.6;
+.sectionTitle{
+
+font-size:28px;
+
 }
 
-.parents{
-margin-top:25px;
+.detail{
+
 font-size:18px;
-line-height:2;
-color:#444;
+
 }
 
-.details{
-margin-top:40px;
-padding:25px;
-background:#faf7f2;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(0,0,0,.05);
-}
-
-.detail-item{
-margin:18px 0;
-font-size:18px;
-}
-
-.detail-title{
-font-weight:bold;
-color:#8d2b45;
-}
-
-.footer{
-margin-top:60px;
-font-size:18px;
-line-height:2;
-color:#666;
 }
 
 </style>
+
 </head>
 
 <body>
 
-<img class="corner top-left"
-src="https://i.ibb.co/FgQ2h6X/floral.png">
+<div class="sparkles">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+</div>
 
-<img class="corner bottom-right"
-src="https://i.ibb.co/FgQ2h6X/floral.png">
+<div id="cover" onclick="openInvitation()">
 
-<div id="cover">
+<h1>NIKAH INVITATION</h1>
 
-<div class="card">
+<p>✨ Tap to Open ✨</p>
 
-<div class="logo">
-AH
+</div>
+
+<div id="invitation">
+
+<div class="container">
+
+<div class="flower f1">🌸</div>
+<div class="flower f2">🌸</div>
+<div class="flower f3">🌸</div>
+<div class="flower f4">🌸</div>
+
+<div class="arabic">
+بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+</div>
+
+<h2 class="title">
+Nikah Invitation
+</h2>
+
+<p class="text">
+With the blessings of Allah, we joyfully invite you to the Nikah ceremony of
+</p>
+
+<div class="names">
+AYISHA HIBA P C
+</div>
+
+<div class="and">
+&
 </div>
 
 <div class="names">
-AYISHA HIBA
-<br>
-&
-<br>
 MUHAMMED SALAH
 </div>
 
-<div class="date">
-Nikah • August 30, 2026
-</div>
+<div class="card">
 
-<div class="line"></div>
+<h3 class="sectionTitle">
+Bride
+</h3>
 
-<div class="dua">
-عسى هذا القبول مكللاً بالبهجات
-<br>
-وعسى دعواتكم من الغيب تروينا
-</div>
-
-<button class="open-btn"
-onclick="openInvitation()">
-TAP TO OPEN
-</button>
-
-</div>
-
-</div>
-
-<div id="main">
-
-<div class="section">
-
-<div class="bismillah">
-بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
-</div>
-
-<div class="title">
-Nikah Invitation
-</div>
-
-<div class="invite-text">
-With the blessings of Almighty Allah,<br>
-we cordially invite you and your family<br>
-to grace the Nikah ceremony of
-</div>
-
-<div class="names-big">
-AYISHA HIBA P C
-<br>
-&
-<br>
-MUHAMMED SALAH
-</div>
-
-<div class="parents">
+<p class="detail">
 
 Daughter of<br>
 
-<b>Mr. KK ABDUL KHADER</b><br>
-&
-<br>
-<b>HAFSATH P C</b>
+<span class="highlight">
+Mr. KK ABDUL KHADER
+</span>
 
-<br><br>
+<br>&<br>
+
+<span class="highlight">
+HAFSATH P C
+</span>
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="sectionTitle">
+Groom
+</h3>
+
+<p class="detail">
 
 Son of<br>
 
-<b>BT SIRAJUDDEEN</b><br>
-&
-<br>
-<b>RASHEEDA V P</b>
+<span class="highlight">
+BT SIRAJUDDEEN
+</span>
+
+<br>&<br>
+
+<span class="highlight">
+RASHEEDA VP
+</span>
+
+</p>
 
 </div>
+<div class="card">
 
-<div class="details">
+<h3 class="sectionTitle">
+Nikah Details
+</h3>
 
-<div class="detail-item">
-<span class="detail-title">📅 Date:</span><br>
-30 August 2026
-</div>
+<p class="detail">
 
-<div class="detail-item">
-<span class="detail-title">🕐 Time:</span><br>
-11:00 AM
-</div>
+📅 <span class="highlight">Date:</span> YOUR NIKAH DATE HERE
 
-<div class="detail-item">
-<span class="detail-title">📍 Venue:</span><br>
-(Your Venue Here)
-</div>
+<br><br>
 
-</div>
-<div class="details section box">
+🕒 <span class="highlight">Time:</span> YOUR TIME HERE
 
-<h2>Nikah Details</h2>
+<br><br>
 
-<p><strong>Date:</strong> 24 January 2027</p>
+📍 <span class="highlight">Venue:</span><br>
 
-<p><strong>Time:</strong> 11:00 AM</p>
+YOUR VENUE NAME HERE
 
-<p><strong>Venue:</strong> Your Nikah Venue Name</p>
+</p>
 
-<a href="https://maps.google.com" target="_blank" class="open-btn" style="margin-top:20px;">
-📍 View Location
+<a href="YOUR GOOGLE MAP LINK" target="_blank" class="button">
+View Location
 </a>
 
 </div>
 
-<div class="footer">
+<div class="card">
 
-<p>
-With prayers and blessings,<br><br>
+<h3 class="sectionTitle">
+With Best Compliments
+</h3>
 
-We request the honour of your presence
-to celebrate the Nikah of
-<strong>Ayisha Hiba & Muhammed Salah</strong>.
+<p class="detail">
+
+Your presence and blessings are the greatest gift to us.
+
+We warmly invite you and your family to celebrate this beautiful occasion together.
+
 </p>
-
-<br>
-
-<p>Thank You ❤️</p>
 
 </div>
 
-</section>
+<footer>
+
+✨ We look forward to celebrating with you ✨
+
+<br><br>
+
+<strong>Ayisha Hiba P C ❤️ Muhammed Salah</strong>
+
+</footer>
+
+</div>
+
+</div>
 
 <script>
 
@@ -380,7 +536,7 @@ function openInvitation(){
 
 document.getElementById("cover").style.display="none";
 
-document.getElementById("main").style.display="block";
+document.getElementById("invitation").style.display="block";
 
 window.scrollTo({
 top:0,
@@ -389,7 +545,35 @@ behavior:"smooth"
 
 }
 
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{threshold:0.2});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="1s";
+
+observer.observe(card);
+
+});
+
 </script>
 
 </body>
+
 </html>
