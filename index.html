@@ -4,95 +4,120 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ayisha Hiba & Muhammed Salah | Nikah Invitation</title>
+<title>Ayisha Hiba & Muhammed Salah | Nikah</title>
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Georgia',serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Georgia,serif;
 }
 
 body{
-    background:#fffaf2;
-    color:#4b3621;
-    text-align:center;
+background:#fffaf0;
+color:#5b4325;
+text-align:center;
 }
 
 .hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:30px;
-    background:
-    linear-gradient(rgba(255,250,242,.85),rgba(255,250,242,.9)),
-    url("https://images.unsplash.com/photo-1519741497674-611481863552");
-    background-size:cover;
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:25px;
+background:linear-gradient(#fffaf0dd,#fffaf0ee),
+url("https://images.unsplash.com/photo-1519741497674-611481863552");
+background-size:cover;
 }
 
 .card{
-    background:white;
-    padding:45px 25px;
-    border-radius:25px;
-    box-shadow:0 10px 35px #d8c29b;
-    max-width:500px;
+background:white;
+padding:45px 25px;
+border-radius:30px;
+max-width:520px;
+box-shadow:0 0 40px #d8b46a;
+animation:fade 2s;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+
+.bismillah{
+font-size:25px;
+color:#b8860b;
+margin-bottom:20px;
 }
 
 h1{
-    font-size:42px;
-    color:#b8860b;
+font-size:42px;
+color:#b8860b;
 }
 
 .and{
-    font-size:28px;
-    margin:15px;
+font-size:30px;
+margin:10px;
 }
 
-.subtitle{
-    font-size:20px;
-    margin:20px 0;
+p{
+font-size:18px;
+line-height:1.7;
 }
 
 .gold{
-    color:#b8860b;
-    font-weight:bold;
+color:#b8860b;
+font-weight:bold;
 }
 
 .section{
-    padding:50px 20px;
+padding:40px 20px;
 }
 
 .box{
-    background:white;
-    margin:20px auto;
-    padding:25px;
-    border-radius:20px;
-    max-width:500px;
-    box-shadow:0 5px 20px #ead9b5;
+background:white;
+padding:25px;
+margin:20px auto;
+max-width:500px;
+border-radius:25px;
+box-shadow:0 5px 25px #ead9b5;
 }
 
-button{
-    background:#b8860b;
-    color:white;
-    border:none;
-    padding:15px 25px;
-    border-radius:30px;
-    font-size:16px;
-    margin-top:20px;
+h2{
+color:#b8860b;
 }
 
 #countdown{
-    font-size:25px;
-    color:#b8860b;
-    margin-top:20px;
+margin-top:20px;
+font-size:22px;
+font-weight:bold;
+color:#b8860b;
+}
+
+button{
+background:#b8860b;
+color:white;
+border:0;
+padding:15px 28px;
+border-radius:30px;
+margin-top:20px;
+font-size:16px;
+}
+
+.flower{
+font-size:35px;
+animation:float 3s infinite;
+}
+
+@keyframes float{
+50%{transform:translateY(-10px)}
 }
 
 footer{
-    padding:25px;
-    background:#b8860b;
-    color:white;
+background:#b8860b;
+color:white;
+padding:25px;
 }
 </style>
 </head>
@@ -100,27 +125,44 @@ footer{
 <body>
 
 <section class="hero">
+
 <div class="card">
 
-<p class="subtitle">Together with their families</p>
+<div class="flower">🌸</div>
+
+<div class="bismillah">
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+
+<p>Together with their families</p>
+
+<br>
 
 <h1>Ayisha Hiba</h1>
+
 <div class="and">&</div>
+
 <h1>Muhammed Salah</h1>
 
-<p class="subtitle">
-Invite you to celebrate their<br>
+<br>
+
+<p>
+Invite you to their
+<br>
 <span class="gold">Nikah Ceremony</span>
 </p>
 
+<br>
+
 <p>
-16 August 2026<br>
-11:00 AM
+📅 16 August 2026<br>
+⏰ 11:00 AM
 </p>
 
 <div id="countdown"></div>
 
 </div>
+
 </section>
 
 
@@ -137,15 +179,29 @@ Time: 11:00 AM
 
 
 <div class="box">
+
 <h2>📍 Venue</h2>
+
 <br>
+
 <p>
 LUXOTICA INTERNATIONAL<br>
 CONVENTION CENTRE
 </p>
 
 <button onclick="window.open('https://maps.google.com')">
-Open Location
+View Location
+</button>
+
+</div>
+
+
+<div class="box">
+
+<h2>💌 Share Invitation</h2>
+
+<button onclick="shareInvite()">
+Share on WhatsApp
 </button>
 
 </div>
@@ -160,22 +216,33 @@ With love & blessings ❤️
 
 <script>
 
-let weddingDate = new Date("August 16, 2026 11:00:00").getTime();
+let date = new Date("August 16, 2026 11:00:00").getTime();
 
 setInterval(function(){
 
-let now = new Date().getTime();
-let distance = weddingDate-now;
+let now=new Date().getTime();
+let diff=date-now;
 
-let days=Math.floor(distance/(1000*60*60*24));
-let hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-let minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-let seconds=Math.floor((distance%(1000*60))/1000);
+let d=Math.floor(diff/(1000*60*60*24));
+let h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+let m=Math.floor((diff%(1000*60*60))/(1000*60));
+let s=Math.floor((diff%(1000*60))/1000);
 
 document.getElementById("countdown").innerHTML =
-days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
+d+" Days "+h+" Hours "+m+" Minutes "+s+" Seconds";
 
 },1000);
+
+
+function shareInvite(){
+
+let text="Ayisha Hiba & Muhammed Salah Nikah 💍\n16 August 2026, 11:00 AM";
+
+window.open(
+"https://wa.me/?text="+encodeURIComponent(text)
+);
+
+}
 
 </script>
 
