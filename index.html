@@ -1,81 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ayisha Hiba & Muhammed Salah | Nikah</title>
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: "Georgia", serif;
+    font-family:Georgia, serif;
 }
 
 body{
-    background:linear-gradient(135deg,#fff1f7,#ffe4ec);
-    color:#4a2635;
+    background:linear-gradient(135deg,#fff0f5,#ffe4e1);
+    color:#5a2a3a;
+    text-align:center;
     overflow-x:hidden;
 }
 
-/* Hero Section */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:20px;
-    animation:fadeIn 2s;
-}
-
 .container{
-    width:100%;
-    max-width:600px;
+    width:90%;
+    max-width:700px;
+    margin:auto;
 }
 
-h1{
+/* Header */
+.header{
+    padding:50px 20px 30px;
+    animation:fadeDown 2s;
+}
+
+.header h1{
     font-size:38px;
-    color:#b76e79;
-    animation:slideDown 2s;
+    color:#b03060;
 }
 
-.names{
+.header p{
     margin-top:15px;
-    font-size:25px;
-    color:#7b3f52;
-}
-
-.quote{
-    margin-top:20px;
     font-size:18px;
-    line-height:1.6;
 }
 
 /* Boxes */
-
 .box{
-    background:white;
-    margin:25px auto;
+    background:rgba(255,255,255,0.85);
+    border-radius:25px;
     padding:25px;
-    border-radius:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.12);
-    animation:up 1.5s;
+    margin:25px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    animation:fadeUp 1.5s;
 }
 
 .box h2{
-    color:#b76e79;
+    color:#b03060;
     margin-bottom:15px;
 }
 
-
 /* Countdown */
-
 .countdown{
     display:flex;
     justify-content:center;
@@ -84,7 +67,7 @@ h1{
 }
 
 .time{
-    background:#b76e79;
+    background:#b03060;
     color:white;
     padding:15px;
     border-radius:15px;
@@ -93,94 +76,94 @@ h1{
 
 .time span{
     display:block;
-    font-size:25px;
+    font-size:28px;
     font-weight:bold;
 }
 
-
-/* Nikah Details */
-
-.details p{
-    font-size:18px;
-    margin:10px;
+/* Couple */
+.couple h2{
+    font-size:30px;
 }
 
+.heart{
+    font-size:35px;
+    animation:pulse 1.5s infinite;
+}
 
-/* Button */
+/* Details */
+.details p{
+    font-size:18px;
+    line-height:1.8;
+}
 
-.music-btn{
-    background:#b76e79;
+/* Music */
+.music button{
+    background:#b03060;
     color:white;
     border:none;
     padding:12px 25px;
     border-radius:30px;
-    cursor:pointer;
     font-size:16px;
 }
 
 
 /* Animations */
-
-@keyframes fadeIn{
+@keyframes fadeDown{
     from{
         opacity:0;
+        transform:translateY(-40px);
     }
     to{
         opacity:1;
-    }
-}
-
-@keyframes slideDown{
-    from{
-        transform:translateY(-50px);
-        opacity:0;
-    }
-    to{
         transform:translateY(0);
-        opacity:1;
     }
 }
 
-@keyframes up{
+@keyframes fadeUp{
     from{
+        opacity:0;
         transform:translateY(40px);
-        opacity:0;
     }
     to{
-        transform:translateY(0);
         opacity:1;
+        transform:translateY(0);
     }
 }
 
+@keyframes pulse{
+    50%{
+        transform:scale(1.2);
+    }
+}
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
-
 <div class="container">
 
+<section class="header">
 <h1>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
+<br>
+<h1>Ayisha Hiba</h1>
+<div class="heart">♥</div>
+<h1>Muhammed Salah</h1>
 
-<div class="names">
-    Ayisha Hiba ❤️<br>
-    &<br>
-    Muhammed Salah
+<p>With the blessings of Allah, we invite you to celebrate our Nikah</p>
+</section>
+
+
+<div class="box couple">
+<h2>Two Hearts, One Journey</h2>
+<p>
+Together with our families, we begin a beautiful new chapter of life.
+</p>
 </div>
 
-<p class="quote">
-"Two souls, one heart and a beautiful journey begins..."
-</p>
-
-
-<!-- Countdown Box -->
 
 <div class="box">
-
-<h2>Countdown</h2>
+<h2>⏳ Countdown</h2>
 
 <div class="countdown">
 
@@ -205,79 +188,92 @@ Seconds
 </div>
 
 </div>
+</div>
+
+
+<div class="box details">
+
+<h2>📅 Nikah Details</h2>
+
+<p>
+Date : <b>XX / XX / XXXX</b>
+</p>
+
+<p>
+Time : <b>XX:XX PM</b>
+</p>
+
+<p>
+Venue : <b>Your Venue Name</b>
+</p>
 
 </div>
-<!-- MUSIC SECTION -->
-<div class="music-box">
+
+ <div class="box">
+
+<h2>💌 A Special Message</h2>
+
+<p>
+"May Allah bless our journey with love, happiness,
+peace and endless blessings."
+</p>
+
+</div>
+
+
+<div class="box music">
+
 <h2>🎵 Our Special Song</h2>
 
-<audio controls autoplay loop>
+<p>
+Listen to our favourite moments with this song.
+</p>
+
+<br>
+
+<audio id="song" loop>
 <source src="song.mp3" type="audio/mpeg">
 </audio>
 
-</div>
-
-
-<!-- COUNTDOWN SECTION -->
-<div class="countdown-box">
-
-<h2>⏳ Countdown</h2>
-
-<div id="countdown"></div>
+<button onclick="playSong()">
+▶ Play Song
+</button>
 
 </div>
 
 
-<!-- NIKAH DETAILS -->
-<div class="details-box">
+<div class="box">
 
-<h2>💍 Nikah Details</h2>
+<h2>🌸 Thank You</h2>
 
 <p>
-📅 Date: 25 December 2026
+Your presence and prayers mean a lot to us.
 </p>
 
-<p>
-⏰ Time: 12:00 PM
-</p>
+<br>
 
 <p>
-📍 Venue: Your Venue Name
+With love ❤️
+<br>
+Ayisha Hiba & Muhammed Salah
 </p>
 
 </div>
 
-
-<!-- ANIMATION SCRIPT -->
 <script>
 
-let nikahDate = new Date("December 25, 2026 12:00:00").getTime();
+// Countdown Date
+let nikahDate = new Date("December 31, 2026 18:00:00").getTime();
 
-let timer = setInterval(function(){
+
+let countdown = setInterval(function(){
 
 let now = new Date().getTime();
 
 let distance = nikahDate - now;
 
 
-let days = Math.floor(distance/(1000*60*60*24));
+let days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
-let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-
-let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-
-let seconds = Math.floor((distance%(1000*60))/1000);
-
-
-document.getElementById("countdown").innerHTML =
-days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
-
-
-},1000);
-
-</script>
-
-
-</body>
-</html>
-  
+let hours = Math.floor(
+(distance % (1000 * 60
