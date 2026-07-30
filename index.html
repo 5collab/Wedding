@@ -133,139 +133,119 @@
   </style>
 </head>
 <body>
+<!-- Hero Section -->
+<section class="hero">
+  <div class="card">
+    <h2>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
+    <p>In the Name of Allah, the Most Gracious, the Most Merciful</p>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
+    <div class="gold-line"></div>
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <h1 class="names">
+      AYISHA HIBA P C
+      <br>&
+      <br>
+      MUHAMMED SALAH
+    </h1>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+    <p>
+      With the blessings of Almighty Allah,
+      we request the honour of your presence
+      at our Nikah ceremony.
+    </p>
+  </div>
+</section>
+
+<!-- Invitation Details -->
+<section>
+  <div class="card">
+
+    <h2>Wedding Invitation</h2>
+
+    <div class="gold-line"></div>
+
+    <div class="parents">
+
+      <h3>Bride</h3>
+      <p><strong>AYISHA HIBA P C</strong></p>
+      <p>Daughter of</p>
+      <p>Mr. KK ABDUL KHADER & Mrs. HAFSATH P C</p>
+
+      <br><br>
+
+      <h3>Groom</h3>
+      <p><strong>MUHAMMED SALAH</strong></p>
+      <p>Son of</p>
+      <p>Mr. BT SIRAJUDDEEN & Mrs. RASHEEDA V P</p>
+
+    </div>
+
+    <div class="date-box">
+
+      <h3>Nikah Ceremony</h3>
+
+      <p><strong>Date:</strong> 16 August 2026</p>
+
+      <p><strong>Time:</strong> 10:30 AM</p>
+
+      <p><strong>Venue:</strong> Your Venue Here</p>
+
+    </div>
+
+    <div class="countdown">
+
+      <div class="time">
+        <span id="days">0</span>
+        Days
+      </div>
+
+      <div class="time">
+        <span id="hours">0</span>
+        Hours
+      </div>
+
+      <div class="time">
+        <span id="minutes">0</span>
+        Minutes
+      </div>
+
+      <div class="time">
+        <span id="seconds">0</span>
+        Seconds
+      </div>
+
+    </div>
+
+  </div>
+</section>
+<script>
+  // Countdown Timer
+  const weddingDate = new Date("August 16, 2026 10:30:00").getTime();
+
+  const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+      clearInterval(timer);
+      document.querySelector(".countdown").innerHTML =
+        "<h2>🎉 Alhamdulillah! The Nikah Ceremony Has Begun 🎉</h2>";
+      return;
     }
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:linear-gradient(135deg,#fdf7f2,#fffaf5);
-      color:#444;
-      overflow-x:hidden;
-    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    section{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      text-align:center;
-      padding:40px 20px;
-      position:relative;
-    }
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 
-    h1,h2,h3{
-      font-family:'Cinzel',serif;
-      color:#8b6b3f;
-    }
+  }, 1000);
+</script>
 
-    .hero{
-      background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
-      background-size:cover;
-      background-position:center;
-    }
-
-    .hero h1{
-      font-size:3.2rem;
-      margin-bottom:15px;
-      animation:fadeDown 1.5s;
-    }
-
-    .hero h2{
-      font-size:1.5rem;
-      font-weight:400;
-      margin-bottom:20px;
-      animation:fadeUp 2s;
-    }
-
-    .hero p{
-      max-width:700px;
-      line-height:1.8;
-      animation:fadeUp 2.5s;
-    }
-
-    .gold-line{
-      width:120px;
-      height:3px;
-      background:#c8a96a;
-      margin:25px auto;
-      border-radius:5px;
-    }
-
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-      max-width:800px;
-      width:95%;
-    }
-
-    .names{
-      font-size:2.4rem;
-      margin:20px 0;
-      color:#8b6b3f;
-    }
-
-    .parents{
-      margin-top:20px;
-      line-height:2;
-      font-size:1.05rem;
-    }
-
-    .date-box{
-      background:#f7f1e8;
-      padding:25px;
-      border-radius:15px;
-      margin-top:25px;
-    }
-
-    .countdown{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:30px;
-    }
-
-    .time{
-      background:#8b6b3f;
-      color:white;
-      padding:20px;
-      border-radius:15px;
-      min-width:90px;
-    }
-
-    .time span{
-      display:block;
-      font-size:2rem;
-      font-weight:bold;
-    }
-
-    @keyframes fadeDown{
-      from{opacity:0;transform:translateY(-40px);}
-      to{opacity:1;transform:translateY(0);}
-    }
-
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(40px);}
-      to{opacity:1;transform:translateY(0);}
-    }
-  </style>
-</head>
-<body>
+</body>
+</html>
