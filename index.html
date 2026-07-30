@@ -1,250 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    body{
-      font-family:'Poppins',sans-serif;
-      background:linear-gradient(135deg,#fdf7f2,#fffaf5);
-      color:#444;
-      overflow-x:hidden;
-    }
+<style>
 
-    section{
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-direction:column;
-      text-align:center;
-      padding:40px 20px;
-      position:relative;
-    }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
+}
 
-    h1,h2,h3{
-      font-family:'Cinzel',serif;
-      color:#8b6b3f;
-    }
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(135deg,#fdf9f3,#fff);
+color:#444;
+overflow-x:hidden;
+}
 
-    .hero{
-      background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
-      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
-      background-size:cover;
-      background-position:center;
-    }
+section{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+text-align:center;
+position:relative;
+}
 
-    .hero h1{
-      font-size:3.2rem;
-      margin-bottom:15px;
-      animation:fadeDown 1.5s;
-    }
+.card{
+background:#fff;
+width:95%;
+max-width:900px;
+padding:45px;
+border-radius:25px;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+animation:fadeUp 1s;
+}
 
-    .hero h2{
-      font-size:1.5rem;
-      font-weight:400;
-      margin-bottom:20px;
-      animation:fadeUp 2s;
-    }
+.hero{
+background:
+linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
+url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+}
 
-    .hero p{
-      max-width:700px;
-      line-height:1.8;
-      animation:fadeUp 2.5s;
-    }
+.arabic{
+font-size:38px;
+color:#9c7a3d;
+margin-bottom:15px;
+}
 
-    .gold-line{
-      width:120px;
-      height:3px;
-      background:#c8a96a;
-      margin:25px auto;
-      border-radius:5px;
-    }
+.subtitle{
+font-size:18px;
+margin-bottom:30px;
+}
 
-    .card{
-      background:white;
-      padding:35px;
-      border-radius:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,.08);
-      max-width:800px;
-      width:95%;
-    }
+.gold-line{
+width:120px;
+height:3px;
+background:#b9924d;
+margin:25px auto;
+border-radius:50px;
+}
 
-    .names{
-      font-size:2.4rem;
-      margin:20px 0;
-      color:#8b6b3f;
-    }
+.names{
+font-family:'Cinzel',serif;
+font-size:65px;
+font-weight:700;
+color:#8b6b3f;
+line-height:1.25;
+margin:25px 0;
+}
 
-    .parents{
-      margin-top:20px;
-      line-height:2;
-      font-size:1.05rem;
-    }
+.invite-text{
+font-size:20px;
+line-height:1.9;
+}
 
-    .date-box{
-      background:#f7f1e8;
-      padding:25px;
-      border-radius:15px;
-      margin-top:25px;
-    }
+h2{
+font-family:'Cinzel',serif;
+color:#8b6b3f;
+font-size:40px;
+margin-bottom:20px;
+}
 
-    .countdown{
-      display:flex;
-      gap:15px;
-      flex-wrap:wrap;
-      justify-content:center;
-      margin-top:30px;
-    }
+h3{
+font-family:'Cinzel',serif;
+color:#8b6b3f;
+font-size:30px;
+margin-top:25px;
+margin-bottom:10px;
+}
 
-    .time{
-      background:#8b6b3f;
-      color:white;
-      padding:20px;
-      border-radius:15px;
-      min-width:90px;
-    }
+.parents{
+margin-top:25px;
+}
 
-    .time span{
-      display:block;
-      font-size:2rem;
-      font-weight:bold;
-    }
+.parents strong{
+display:block;
+font-size:34px;
+color:#8b6b3f;
+margin-bottom:10px;
+}
 
-    @keyframes fadeDown{
-      from{opacity:0;transform:translateY(-40px);}
-      to{opacity:1;transform:translateY(0);}
-    }
+.parents p{
+font-size:22px;
+line-height:1.9;
+}
 
-    @keyframes fadeUp{
-      from{opacity:0;transform:translateY(40px);}
-      to{opacity:1;transform:translateY(0);}
-    }
-  </style>
+.date-box{
+margin-top:40px;
+background:#faf4ea;
+padding:35px;
+border-radius:20px;
+font-size:22px;
+line-height:2;
+border:2px solid #e7d2a7;
+}
+
+.map-btn{
+display:inline-block;
+margin-top:25px;
+padding:15px 35px;
+background:#8b6b3f;
+color:#fff;
+text-decoration:none;
+border-radius:50px;
+font-size:20px;
+font-weight:600;
+transition:.3s;
+}
+
+.map-btn:hover{
+transform:scale(1.05);
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:35px;
+}
+
+.time{
+background:#8b6b3f;
+color:#fff;
+padding:22px;
+border-radius:18px;
+min-width:100px;
+}
+
+.time span{
+display:block;
+font-size:38px;
+font-weight:bold;
+}
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(40px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.names{
+font-size:42px;
+}
+
+.parents strong{
+font-size:28px;
+}
+
+.parents p{
+font-size:18px;
+}
+
+h2{
+font-size:30px;
+}
+
+h3{
+font-size:24px;
+}
+
+.date-box{
+font-size:18px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-<!-- Hero Section -->
+  <!-- HERO SECTION -->
+
 <section class="hero">
-  <div class="card">
-    <h2>بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</h2>
-    <p>In the Name of Allah, the Most Gracious, the Most Merciful</p>
 
-    <div class="gold-line"></div>
+<div class="card">
 
-    <h1 class="names">
-      AYISHA HIBA P C
-      <br>&
-      <br>
-      MUHAMMED SALAH
-    </h1>
+<div class="arabic">
+﷽
+</div>
 
-    <p>
-      With the blessings of Almighty Allah,
-      we request the honour of your presence
-      at our Nikah ceremony.
-    </p>
-  </div>
+<p class="subtitle">
+In the Name of Allah, the Most Gracious, the Most Merciful
+</p>
+
+<div class="gold-line"></div>
+
+<div class="names">
+AYISHA HIBA P C
+<br>
+&
+<br>
+MUHAMMED SALAH
+</div>
+
+<p class="invite-text">
+With the blessings of Almighty Allah,
+we joyfully invite you and your family to grace
+our Nikah Ceremony with your esteemed presence
+and heartfelt blessings.
+</p>
+
+</div>
+
 </section>
 
-<!-- Invitation Details -->
+<!-- INVITATION DETAILS -->
+
 <section>
-  <div class="card">
 
-    <h2>Wedding Invitation</h2>
+<div class="card">
 
-    <div class="gold-line"></div>
+<h2>Wedding Invitation</h2>
 
-    <div class="parents">
+<div class="gold-line"></div>
 
-      <h3>Bride</h3>
-      <p><strong>AYISHA HIBA P C</strong></p>
-      <p>Daughter of</p>
-      <p>Mr. KK ABDUL KHADER & Mrs. HAFSATH P C</p>
+<div class="parents">
 
-      <br><br>
+<h3>Bride</h3>
 
-      <h3>Groom</h3>
-      <p><strong>MUHAMMED SALAH</strong></p>
-      <p>Son of</p>
-      <p>Mr. BT SIRAJUDDEEN & Mrs. RASHEEDA V P</p>
+<strong>AYISHA HIBA P C</strong>
 
-    </div>
+<p>Daughter of</p>
 
-    <div class="date-box">
+<p>
+Mr. KK ABDUL KHADER
+<br>
+&
+<br>
+Mrs. HAFSATH P C
+</p>
 
-      <h3>Nikah Ceremony</h3>
+<br><br>
 
-      <p><strong>Date:</strong> 16 August 2026</p>
+<h3>Groom</h3>
 
-      <p><strong>Time:</strong> 10:30 AM</p>
+<strong>MUHAMMED SALAH</strong>
 
-      <p><strong>Venue:</strong> Your Venue Here</p>
+<p>Son of</p>
 
-    </div>
+<p>
+Mr. BT SIRAJUDDEEN
+<br>
+&
+<br>
+Mrs. RASHEEDA V P
+</p>
 
-    <div class="countdown">
+</div>
 
-      <div class="time">
-        <span id="days">0</span>
-        Days
-      </div>
+<div class="date-box">
 
-      <div class="time">
-        <span id="hours">0</span>
-        Hours
-      </div>
+<h3>Nikah Ceremony</h3>
 
-      <div class="time">
-        <span id="minutes">0</span>
-        Minutes
-      </div>
+<p><strong>Date:</strong> 16 August 2026</p>
 
-      <div class="time">
-        <span id="seconds">0</span>
-        Seconds
-      </div>
+<p><strong>Time:</strong> 10:30 AM</p>
 
-    </div>
+<p>
+<strong>Venue:</strong><br><br>
 
-  </div>
+LUXOTICA INTERNATIONAL<br>
+CONVENTION CENTRE
+</p>
+
+<a
+href="https://maps.app.goo.gl/sGFecJkhf5B9PxbL6"
+target="_blank"
+class="map-btn">
+
+📍 View Location
+
+</a>
+
+</div>
+
+<div class="countdown">
+
+<div class="time">
+<span id="days">0</span>
+Days
+</div>
+
+<div class="time">
+<span id="hours">0</span>
+Hours
+</div>
+
+<div class="time">
+<span id="minutes">0</span>
+Minutes
+</div>
+
+<div class="time">
+<span id="seconds">0</span>
+Seconds
+</div>
+
+</div>
+
+</div>
+
 </section>
-<script>
-  // Countdown Timer
-  const weddingDate = new Date("August 16, 2026 10:30:00").getTime();
 
-  const timer = setInterval(function () {
+  <script>
 
-    const now = new Date().getTime();
-    const distance = weddingDate - now;
+// ==========================
+// Nikah Countdown Timer
+// ==========================
 
-    if (distance < 0) {
-      clearInterval(timer);
-      document.querySelector(".countdown").innerHTML =
-        "<h2>🎉 Alhamdulillah! The Nikah Ceremony Has Begun 🎉</h2>";
-      return;
-    }
+const weddingDate = new Date("August 16, 2026 10:30:00").getTime();
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+const countdown = setInterval(function(){
 
-    document.getElementById("days").innerHTML = days;
-    document.getElementById("hours").innerHTML = hours;
-    document.getElementById("minutes").innerHTML = minutes;
-    document.getElementById("seconds").innerHTML = seconds;
+const now = new Date().getTime();
 
-  }, 1000);
+const distance = weddingDate - now;
+
+if(distance <= 0){
+
+clearInterval(countdown);
+
+document.querySelector(".countdown").innerHTML = `
+<h2 style="color:#8b6b3f;">
+🎉 Alhamdulillah!<br>
+The Nikah Ceremony Has Begun
+</h2>
+`;
+
+return;
+
+}
+
+const days = Math.floor(distance/(1000*60*60*24));
+
+const hours = Math.floor(
+(distance%(1000*60*60*24))/(1000*60*60)
+);
+
+const minutes = Math.floor(
+(distance%(1000*60*60))/(1000*60)
+);
+
+const seconds = Math.floor(
+(distance%(1000*60))/1000
+);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+},1000);
+
+
+// Fade animation on scroll
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach((entry)=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+});
+
+document.querySelectorAll(".card").forEach((card)=>{
+
+card.style.opacity="0";
+card.style.transform="translateY(40px)";
+card.style.transition="1s";
+
+observer.observe(card);
+
+});
+
 </script>
 
 </body>
