@@ -248,3 +248,150 @@ window.open(
 
 </body>
 </html>
+<section class="section">
+
+<div class="box">
+
+<h2>💍 Nikah Details</h2>
+
+<br>
+
+<p>
+Date: 16 August 2026<br>
+Time: 11:00 AM
+</p>
+
+</div>
+
+
+<div class="box">
+
+<h2>📍 Venue</h2>
+
+<br>
+
+<p>
+LUXOTICA INTERNATIONAL<br>
+CONVENTION CENTRE
+</p>
+
+<button onclick="openMap()">
+Open Location
+</button>
+
+</div>
+
+
+<div class="box">
+
+<h2>🎵 Wedding Nasheed</h2>
+
+<p>
+Tap below to play
+</p>
+
+<button onclick="playNasheed()">
+▶ Play Nasheed
+</button>
+
+<audio id="nasheed" src="nasheed.mp3"></audio>
+
+</div>
+
+
+<div class="box">
+
+<h2>💌 RSVP</h2>
+
+<p>
+Confirm your presence
+</p>
+
+<button onclick="rsvp()">
+WhatsApp RSVP
+</button>
+
+</div>
+
+</section>
+
+
+<footer style="
+background:#b8860b;
+color:white;
+padding:25px;
+">
+With love & blessings ❤️
+</footer>
+
+
+<script>
+
+let weddingDate = new Date("August 16, 2026 11:00:00").getTime();
+
+
+setInterval(function(){
+
+let now = new Date().getTime();
+
+let distance = weddingDate - now;
+
+
+let days = Math.floor(distance/(1000*60*60*24));
+
+let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+
+let seconds = Math.floor((distance%(1000*60))/1000);
+
+
+document.getElementById("countdown").innerHTML =
+days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
+
+
+},1000);
+
+
+
+function openMap(){
+
+window.open(
+"https://maps.google.com/?q=LUXOTICA+INTERNATIONAL+CONVENTION+CENTRE"
+);
+
+}
+
+
+
+function playNasheed(){
+
+let audio=document.getElementById("nasheed");
+
+if(audio.paused){
+audio.play();
+}
+else{
+audio.pause();
+}
+
+}
+
+
+
+function rsvp(){
+
+let message =
+"Assalamu Alaikum 😊\n\nI would like to attend the Nikah of Ayisha Hiba & Muhammed Salah on 16 August 2026.";
+
+window.open(
+"https://wa.me/?text="+encodeURIComponent(message)
+);
+
+}
+
+</script>
+
+
+</body>
+</html>
