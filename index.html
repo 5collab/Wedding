@@ -1,279 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
 
-<title>Ayisha Hiba & Muhammed Salah | Nikah</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Georgia, serif;
-}
-
-body{
-    background:linear-gradient(135deg,#fff0f5,#ffe4e1);
-    color:#5a2a3a;
-    text-align:center;
-    overflow-x:hidden;
-}
-
-.container{
-    width:90%;
-    max-width:700px;
-    margin:auto;
-}
-
-/* Header */
-.header{
-    padding:50px 20px 30px;
-    animation:fadeDown 2s;
-}
-
-.header h1{
-    font-size:38px;
-    color:#b03060;
-}
-
-.header p{
-    margin-top:15px;
-    font-size:18px;
-}
-
-/* Boxes */
-.box{
-    background:rgba(255,255,255,0.85);
-    border-radius:25px;
-    padding:25px;
-    margin:25px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,0.12);
-    animation:fadeUp 1.5s;
-}
-
-.box h2{
-    color:#b03060;
-    margin-bottom:15px;
-}
-
-/* Countdown */
-.countdown{
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.time{
-    background:#b03060;
-    color:white;
-    padding:15px;
-    border-radius:15px;
-    min-width:75px;
-}
-
-.time span{
-    display:block;
-    font-size:28px;
-    font-weight:bold;
-}
-
-/* Couple */
-.couple h2{
-    font-size:30px;
-}
-
-.heart{
-    font-size:35px;
-    animation:pulse 1.5s infinite;
-}
-
-/* Details */
-.details p{
-    font-size:18px;
-    line-height:1.8;
-}
-
-/* Music */
-.music button{
-    background:#b03060;
-    color:white;
-    border:none;
-    padding:12px 25px;
-    border-radius:30px;
-    font-size:16px;
-}
-
-
-/* Animations */
-@keyframes fadeDown{
-    from{
-        opacity:0;
-        transform:translateY(-40px);
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(40px);
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#fdf7f2,#fffaf5);
+      color:#444;
+      overflow-x:hidden;
     }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
 
-@keyframes pulse{
-    50%{
-        transform:scale(1.2);
+    section{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:40px 20px;
+      position:relative;
     }
-}
 
-</style>
+    h1,h2,h3{
+      font-family:'Cinzel',serif;
+      color:#8b6b3f;
+    }
+
+    .hero{
+      background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
+
+    .hero h1{
+      font-size:3.2rem;
+      margin-bottom:15px;
+      animation:fadeDown 1.5s;
+    }
+
+    .hero h2{
+      font-size:1.5rem;
+      font-weight:400;
+      margin-bottom:20px;
+      animation:fadeUp 2s;
+    }
+
+    .hero p{
+      max-width:700px;
+      line-height:1.8;
+      animation:fadeUp 2.5s;
+    }
+
+    .gold-line{
+      width:120px;
+      height:3px;
+      background:#c8a96a;
+      margin:25px auto;
+      border-radius:5px;
+    }
+
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      max-width:800px;
+      width:95%;
+    }
+
+    .names{
+      font-size:2.4rem;
+      margin:20px 0;
+      color:#8b6b3f;
+    }
+
+    .parents{
+      margin-top:20px;
+      line-height:2;
+      font-size:1.05rem;
+    }
+
+    .date-box{
+      background:#f7f1e8;
+      padding:25px;
+      border-radius:15px;
+      margin-top:25px;
+    }
+
+    .countdown{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:30px;
+    }
+
+    .time{
+      background:#8b6b3f;
+      color:white;
+      padding:20px;
+      border-radius:15px;
+      min-width:90px;
+    }
+
+    .time span{
+      display:block;
+      font-size:2rem;
+      font-weight:bold;
+    }
+
+    @keyframes fadeDown{
+      from{opacity:0;transform:translateY(-40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="container">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nikah Invitation | Ayisha Hiba & Muhammed Salah</title>
 
-<section class="header">
-<h1>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
-<br>
-<h1>Ayisha Hiba</h1>
-<div class="heart">♥</div>
-<h1>Muhammed Salah</h1>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<p>With the blessings of Allah, we invite you to celebrate our Nikah</p>
-</section>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
 
+    body{
+      font-family:'Poppins',sans-serif;
+      background:linear-gradient(135deg,#fdf7f2,#fffaf5);
+      color:#444;
+      overflow-x:hidden;
+    }
 
-<div class="box couple">
-<h2>Two Hearts, One Journey</h2>
-<p>
-Together with our families, we begin a beautiful new chapter of life.
-</p>
-</div>
+    section{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:40px 20px;
+      position:relative;
+    }
 
+    h1,h2,h3{
+      font-family:'Cinzel',serif;
+      color:#8b6b3f;
+    }
 
-<div class="box">
-<h2>⏳ Countdown</h2>
+    .hero{
+      background:linear-gradient(rgba(255,255,255,.75),rgba(255,255,255,.75)),
+      url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80');
+      background-size:cover;
+      background-position:center;
+    }
 
-<div class="countdown">
+    .hero h1{
+      font-size:3.2rem;
+      margin-bottom:15px;
+      animation:fadeDown 1.5s;
+    }
 
-<div class="time">
-<span id="days">00</span>
-Days
-</div>
+    .hero h2{
+      font-size:1.5rem;
+      font-weight:400;
+      margin-bottom:20px;
+      animation:fadeUp 2s;
+    }
 
-<div class="time">
-<span id="hours">00</span>
-Hours
-</div>
+    .hero p{
+      max-width:700px;
+      line-height:1.8;
+      animation:fadeUp 2.5s;
+    }
 
-<div class="time">
-<span id="minutes">00</span>
-Minutes
-</div>
+    .gold-line{
+      width:120px;
+      height:3px;
+      background:#c8a96a;
+      margin:25px auto;
+      border-radius:5px;
+    }
 
-<div class="time">
-<span id="seconds">00</span>
-Seconds
-</div>
+    .card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      max-width:800px;
+      width:95%;
+    }
 
-</div>
-</div>
+    .names{
+      font-size:2.4rem;
+      margin:20px 0;
+      color:#8b6b3f;
+    }
 
+    .parents{
+      margin-top:20px;
+      line-height:2;
+      font-size:1.05rem;
+    }
 
-<div class="box details">
+    .date-box{
+      background:#f7f1e8;
+      padding:25px;
+      border-radius:15px;
+      margin-top:25px;
+    }
 
-<h2>📅 Nikah Details</h2>
+    .countdown{
+      display:flex;
+      gap:15px;
+      flex-wrap:wrap;
+      justify-content:center;
+      margin-top:30px;
+    }
 
-<p>
-Date : <b>XX / XX / XXXX</b>
-</p>
+    .time{
+      background:#8b6b3f;
+      color:white;
+      padding:20px;
+      border-radius:15px;
+      min-width:90px;
+    }
 
-<p>
-Time : <b>XX:XX PM</b>
-</p>
+    .time span{
+      display:block;
+      font-size:2rem;
+      font-weight:bold;
+    }
 
-<p>
-Venue : <b>Your Venue Name</b>
-</p>
+    @keyframes fadeDown{
+      from{opacity:0;transform:translateY(-40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
 
-</div>
-
- <div class="box">
-
-<h2>💌 A Special Message</h2>
-
-<p>
-"May Allah bless our journey with love, happiness,
-peace and endless blessings."
-</p>
-
-</div>
-
-
-<div class="box music">
-
-<h2>🎵 Our Special Song</h2>
-
-<p>
-Listen to our favourite moments with this song.
-</p>
-
-<br>
-
-<audio id="song" loop>
-<source src="song.mp3" type="audio/mpeg">
-</audio>
-
-<button onclick="playSong()">
-▶ Play Song
-</button>
-
-</div>
-
-
-<div class="box">
-
-<h2>🌸 Thank You</h2>
-
-<p>
-Your presence and prayers mean a lot to us.
-</p>
-
-<br>
-
-<p>
-With love ❤️
-<br>
-Ayisha Hiba & Muhammed Salah
-</p>
-
-</div>
-
-<script>
-
-// Countdown Date
-let nikahDate = new Date("December 31, 2026 18:00:00").getTime();
-
-
-let countdown = setInterval(function(){
-
-let now = new Date().getTime();
-
-let distance = nikahDate - now;
-
-
-let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-
-let hours = Math.floor(
-(distance % (1000 * 60
+    @keyframes fadeUp{
+      from{opacity:0;transform:translateY(40px);}
+      to{opacity:1;transform:translateY(0);}
+    }
+  </style>
+</head>
+<body>
