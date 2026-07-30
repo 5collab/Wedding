@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -72,57 +73,46 @@ opacity:0;
 
 }
 
-/* Tap Screen */
+/* Cover Page */
 
 #cover{
-
 height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
 background:linear-gradient(135deg,#fff,#fdf6ef);
-
 cursor:pointer;
 transition:1s;
 position:relative;
 z-index:5;
-
 }
 
 #cover h1{
-
 font-family:'Cinzel',serif;
 font-size:42px;
 color:#8b1e3f;
 letter-spacing:3px;
-
 }
 
 #cover p{
-
 margin-top:20px;
 font-size:18px;
 animation:pulse 1.5s infinite;
 color:#777;
-
 }
 
 @keyframes pulse{
-
 0%{opacity:.4;}
 50%{opacity:1;}
 100%{opacity:.4;}
-
 }
 
 /* Invitation */
 
 #invitation{
-
 display:none;
 animation:openBook 1.2s ease;
-
 }
 
 @keyframes openBook{
@@ -140,66 +130,52 @@ opacity:1;
 }
 
 .container{
-
 max-width:900px;
 margin:auto;
 padding:40px 25px;
 text-align:center;
 position:relative;
 z-index:2;
-
 }
 
 .arabic{
-
 font-family:'Amiri',serif;
 font-size:42px;
 color:#8b1e3f;
 margin-bottom:20px;
-
 }
 
 .title{
-
 font-family:'Cinzel',serif;
 font-size:50px;
 color:#8b1e3f;
 margin-bottom:20px;
-
 }
 
 .text{
-
 font-size:20px;
 line-height:1.9;
 margin-bottom:40px;
-
 }
 
 .names{
-
 font-family:'Cormorant Garamond',serif;
 font-size:65px;
 font-weight:700;
 color:#8b1e3f;
 animation:goldGlow 3s infinite;
-
 }
 
 .and{
-
 font-size:55px;
 margin:15px 0;
 color:#c89b3c;
-
 }
 
 @keyframes goldGlow{
 
 0%{text-shadow:0 0 5px #d4af37;}
-
 50%{text-shadow:0 0 20px gold;}
-
 100%{text-shadow:0 0 5px #d4af37;}
 
 }
@@ -280,6 +256,35 @@ transform:scale(1.05);
 
 }
 
+/* Countdown */
+
+.countdown{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:25px;
+}
+
+.time-box{
+background:#fff;
+padding:18px;
+border-radius:20px;
+min-width:90px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.time-box h2{
+font-size:32px;
+color:#8b1e3f;
+margin-bottom:5px;
+}
+
+.time-box span{
+font-size:15px;
+color:#777;
+}
+
 .flower{
 
 position:absolute;
@@ -289,35 +294,15 @@ animation:rotateFlower 15s linear infinite;
 
 }
 
-.f1{
-top:40px;
-left:20px;
-}
-
-.f2{
-top:40px;
-right:20px;
-}
-
-.f3{
-bottom:40px;
-left:20px;
-}
-
-.f4{
-bottom:40px;
-right:20px;
-}
+.f1{top:40px;left:20px;}
+.f2{top:40px;right:20px;}
+.f3{bottom:40px;left:20px;}
+.f4{bottom:40px;right:20px;}
 
 @keyframes rotateFlower{
 
-from{
-transform:rotate(0deg);
-}
-
-to{
-transform:rotate(360deg);
-}
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
 
 }
 
@@ -331,40 +316,24 @@ color:#777;
 
 @media(max-width:768px){
 
-.names{
+.names{font-size:46px;}
+.title{font-size:34px;}
+.arabic{font-size:34px;}
+.text{font-size:18px;}
+.sectionTitle{font-size:28px;}
+.detail{font-size:18px;}
 
-font-size:46px;
-
+.countdown{
+gap:10px;
 }
 
-.title{
-
-font-size:34px;
-
+.time-box{
+min-width:75px;
+padding:15px;
 }
 
-.arabic{
-
-font-size:34px;
-
-}
-
-.text{
-
-font-size:18px;
-
-}
-
-.sectionTitle{
-
-font-size:28px;
-
-}
-
-.detail{
-
-font-size:18px;
-
+.time-box h2{
+font-size:24px;
 }
 
 }
@@ -402,7 +371,7 @@ font-size:18px;
 <div class="flower f4">🌸</div>
 
 <div class="arabic">
-بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+بِسْمِ اللَّهِ الرَّحْمٰنِ الرَّحِيمِ
 </div>
 
 <h2 class="title">
@@ -412,7 +381,6 @@ Nikah Invitation
 <p class="text">
 With the blessings of Allah, we joyfully invite you to the Nikah ceremony of
 </p>
-
 <div class="names">
 AYISHA HIBA P C
 </div>
@@ -472,6 +440,7 @@ RASHEEDA VP
 </p>
 
 </div>
+
 <div class="card">
 
 <h3 class="sectionTitle">
@@ -480,24 +449,59 @@ Nikah Details
 
 <p class="detail">
 
-📅 <span class="highlight">Date:</span> 16 AUGUST 2026
+📅 <span class="highlight">Date:</span>
+16 AUGUST 2026
+
 <br><br>
 
-🕒 <span class="highlight">Time:</span> 11:00AM
+🕒 <span class="highlight">Time:</span>
+11:00 AM
 
 <br><br>
 
 📍 <span class="highlight">Venue:</span><br>
 
 LUXOTICA INTERNATIONAL CONVENTION CENTRE
+
 </p>
 
-<a href="YOUR GOOGLE MAP LINK" target="_blank" class="button">
+<a href="YOUR_GOOGLE_MAP_LINK" target="_blank" class="button">
 View Location
 </a>
 
 </div>
 
+<div class="card">
+
+<h3 class="sectionTitle">
+Countdown to Nikah
+</h3>
+
+<div class="countdown">
+
+<div class="time-box">
+<h2 id="days">00</h2>
+<span>Days</span>
+</div>
+
+<div class="time-box">
+<h2 id="hours">00</h2>
+<span>Hours</span>
+</div>
+
+<div class="time-box">
+<h2 id="minutes">00</h2>
+<span>Minutes</span>
+</div>
+
+<div class="time-box">
+<h2 id="seconds">00</h2>
+<span>Seconds</span>
+</div>
+
+</div>
+
+</div>
 <div class="card">
 
 <h3 class="sectionTitle">
@@ -507,6 +511,8 @@ With Best Compliments
 <p class="detail">
 
 Your presence and blessings are the greatest gift to us.
+
+<br><br>
 
 We warmly invite you and your family to celebrate this beautiful occasion together.
 
@@ -569,9 +575,48 @@ card.style.transition="1s";
 observer.observe(card);
 
 });
+  /* ===== LIVE COUNTDOWN ===== */
 
-</script>
+const targetDate = new Date("August 16, 2026 11:00:00").getTime();
+
+function updateCountdown(){
+
+const now = new Date().getTime();
+
+const distance = targetDate - now;
+
+if(distance <= 0){
+
+document.getElementById("days").innerHTML="00";
+document.getElementById("hours").innerHTML="00";
+document.getElementById("minutes").innerHTML="00";
+document.getElementById("seconds").innerHTML="00";
+
+return;
+
+}
+
+const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+
+const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+document.getElementById("days").innerHTML = days;
+document.getElementById("hours").innerHTML = hours;
+document.getElementById("minutes").innerHTML = minutes;
+document.getElementById("seconds").innerHTML = seconds;
+
+}
+
+updateCountdown();
+
+setInterval(updateCountdown,1000);
+  </script>
 
 </body>
 
 </html>
+  
