@@ -48,3 +48,275 @@ max-width:520px;
 box-shadow:0 15px 40px rgba(184,134,11,.35);
 
 animation:
+</head>
+
+<body>
+
+<section class="hero">
+
+<div class="card">
+
+<div class="flower">🌸</div>
+
+<div class="bismillah">
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+</div>
+
+
+<p>Together with their families</p>
+
+<br>
+
+<h1>Ayisha Hiba</h1>
+
+<div class="and">&</div>
+
+<h1>Muhammed Salah</h1>
+
+
+<br>
+
+
+<p>
+Invite you to their
+<br>
+
+<span class="gold">
+Nikah Ceremony
+</span>
+
+</p>
+
+
+<br>
+
+
+<p>
+📅 16 August 2026
+<br>
+⏰ 11:00 AM
+</p>
+
+
+<div id="countdown">
+Loading...
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section class="section">
+
+
+<div class="box">
+
+<h2>💍 Nikah Details</h2>
+
+<br>
+
+<p>
+
+Date: 16 August 2026
+
+<br>
+
+Time: 11:00 AM
+
+</p>
+
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<h2>📍 Venue</h2>
+
+<br>
+
+
+<p>
+
+LUXOTICA INTERNATIONAL
+<br>
+
+CONVENTION CENTRE
+
+</p>
+
+
+
+<button onclick="openMap()">
+
+Open Location
+
+</button>
+
+
+</div>
+
+
+
+
+<div class="box">
+
+
+<h2>💌 RSVP</h2>
+
+<br>
+
+<p>
+Confirm your presence
+</p>
+
+
+
+<button onclick="rsvp()">
+
+WhatsApp RSVP
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<footer>
+
+With love & blessings ❤️
+
+</footer>
+
+
+
+
+
+<script>
+
+
+let weddingDate =
+
+new Date("August 16, 2026 11:00:00").getTime();
+
+
+
+let timer = setInterval(function(){
+
+
+let now = new Date().getTime();
+
+
+let distance = weddingDate - now;
+
+
+
+if(distance < 0){
+
+document.getElementById("countdown").innerHTML =
+"Alhamdulillah ❤️ The Day Has Arrived";
+
+clearInterval(timer);
+
+return;
+
+}
+
+
+
+let days =
+Math.floor(distance/(1000*60*60*24));
+
+
+
+let hours =
+Math.floor(
+(distance%(1000*60*60*24))/(1000*60*60)
+);
+
+
+
+let minutes =
+Math.floor(
+(distance%(1000*60*60))/(1000*60)
+);
+
+
+
+let seconds =
+Math.floor(
+(distance%(1000*60))/1000
+);
+
+
+
+document.getElementById("countdown").innerHTML =
+
+days+" Days "
++hours+" Hours "
++minutes+" Minutes "
++seconds+" Seconds";
+
+
+
+},1000);
+
+
+
+
+
+function openMap(){
+
+
+window.open(
+
+"https://maps.google.com/?q=LUXOTICA+INTERNATIONAL+CONVENTION+CENTRE"
+
+);
+
+
+}
+
+
+
+
+
+function rsvp(){
+
+
+let msg =
+
+"Assalamu Alaikum 😊\n\nI would like to attend the Nikah of Ayisha Hiba & Muhammed Salah on 16 August 2026.";
+
+
+
+window.open(
+
+"https://wa.me/?text="+encodeURIComponent(msg)
+
+);
+
+
+}
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
