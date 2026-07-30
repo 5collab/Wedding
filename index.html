@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Wedding Invitation | Ayisha Hiba & Muhammed Salah</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -17,13 +18,13 @@ box-sizing:border-box;
 }
 
 body{
+background:#f8f2e8;
 font-family:'Poppins',sans-serif;
-background:#f8f5ef;
 overflow-x:hidden;
-color:#333;
+color:#444;
 }
 
-/* Cover Page */
+/* Cover */
 
 #cover{
 position:fixed;
@@ -34,134 +35,196 @@ height:100%;
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(rgba(255,255,255,.93),rgba(255,255,255,.93)),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80") center/cover;
+background:linear-gradient(rgba(248,242,232,.95),rgba(248,242,232,.95)),
+url("https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&w=1600&q=80") center/cover;
 z-index:9999;
-transition:1s;
 }
 
-.cover-content{
+.cover-box{
+
+width:92%;
+max-width:450px;
+
+padding:40px 25px;
+
 text-align:center;
-padding:20px;
-animation:fadeIn 1.5s ease;
+
+border:2px solid #c8a96a;
+
+border-radius:25px;
+
+background:rgba(255,255,255,.88);
+
+box-shadow:0 15px 35px rgba(0,0,0,.12);
+
 }
 
 .hs{
+
 font-family:'Cinzel',serif;
-font-size:110px;
-font-weight:700;
-letter-spacing:-12px;
-color:#6d1d3d;
+
+font-size:90px;
+
+color:#8b6a2b;
+
+margin-bottom:10px;
+
+}
+
+.arabic{
+
+font-family:'Amiri',serif;
+
+font-size:32px;
+
+color:#8b1e46;
+
+line-height:1.7;
+
+}
+
+.verse{
+
+margin-top:15px;
+
+font-family:'Amiri',serif;
+
+font-size:23px;
+
+line-height:2;
+
+color:#555;
+
 }
 
 .invitation{
+
+margin-top:25px;
+
 font-family:'Cinzel',serif;
-font-size:42px;
-margin-top:15px;
-letter-spacing:4px;
-color:#333;
+
+font-size:36px;
+
+letter-spacing:3px;
+
+color:#8b1e46;
+
 }
 
 .names{
+
+margin-top:25px;
+
 font-size:28px;
-margin-top:30px;
-font-weight:500;
-letter-spacing:3px;
-color:#8b1e46;
+
+font-weight:600;
+
+line-height:1.8;
+
+color:#333;
+
 }
 
 .date{
+
+margin-top:18px;
+
 font-size:22px;
-margin-top:15px;
-color:#666;
+
+color:#8b6a2b;
+
 }
 
 .open-btn{
-margin-top:45px;
-padding:16px 55px;
-border-radius:50px;
-border:none;
-background:#8b1e46;
-color:#fff;
-font-size:20px;
-cursor:pointer;
-transition:.4s;
-}
 
-.open-btn:hover{
-transform:scale(1.05);
+margin-top:35px;
+
+padding:16px 50px;
+
+background:#8b1e46;
+
+color:#fff;
+
+border:none;
+
+border-radius:40px;
+
+font-size:19px;
+
+cursor:pointer;
+
 }
 
 .container{
+
 display:none;
-animation:fadeIn 1s;
+
+padding:20px;
+
 }
 
 .card{
-width:92%;
-max-width:900px;
-margin:35px auto;
+
 background:#fff;
-padding:35px;
-border-radius:25px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+border:2px solid #d8c39a;
+
+border-radius:20px;
+
+padding:30px;
+
+margin:25px auto;
+
+max-width:900px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
 }
 
 .heading{
+
 font-family:'Cinzel',serif;
-font-size:40px;
+
+font-size:34px;
+
 text-align:center;
+
 color:#8b1e46;
-margin-bottom:25px;
+
+margin-bottom:20px;
+
 }
 
 .details{
+
 text-align:center;
-line-height:2;
+
 font-size:20px;
+
+line-height:2;
+
 }
 
 .location-btn{
+
 display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:#8b1e46;
-color:#fff;
-text-decoration:none;
-border-radius:40px;
-font-size:20px;
-font-weight:600;
-}
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-gap:15px;
 margin-top:25px;
-}
 
-.gallery img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:18px;
-transition:.4s;
-box-shadow:0 8px 20px rgba(0,0,0,.15);
-}
+padding:15px 35px;
 
-.gallery img:hover{
-transform:scale(1.05);
-}
+background:#8b1e46;
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(25px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
+color:#fff;
+
+text-decoration:none;
+
+border-radius:35px;
+
+font-size:18px;
+
+font-weight:600;
+
 }
 
 </style>
@@ -172,26 +235,46 @@ transform:translateY(0);
 
 <div id="cover">
 
-<div class="cover-content">
+<div class="cover-box">
 
 <div class="hs">HS</div>
 
+<div class="arabic">
+بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ
+</div>
+
+<div class="verse">
+
+وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً
+
+</div>
+
 <div class="invitation">
+
 WEDDING INVITATION
+
 </div>
 
 <div class="names">
-AYISHA HIBA <br>
-& <br>
+
+AYISHA HIBA
+
+<br>❦<br>
+
 MUHAMMED SALAH
+
 </div>
 
 <div class="date">
+
 16 AUGUST 2026
+
 </div>
 
 <button class="open-btn" onclick="openInvitation()">
+
 ✨ TAP TO OPEN ✨
+
 </button>
 
 </div>
@@ -199,39 +282,22 @@ MUHAMMED SALAH
 </div>
 
 <div class="container" id="mainContent">
-
-<section class="card">
-
-<h1 class="heading">
-Together With Their Families
-</h1>
-
-<div class="details">
-
-<h2 style="color:#8b1e46;">AYISHA HIBA</h2>
-
-<p>Daughter of</p>
-
-<b>Mr. KK ABDUL KHADER</b><br>
-<b>& HAFSATH PC</b>
-
-<br><br>
-
-<h2 style="color:#8b1e46;">MUHAMMED SALAH</h2>
-
-<p>Son of</p>
-
-<b>BT SIRAJUDDEEN</b><br>
-<b>& RASHEEDA VP</b>
-
-</div>
-
-</section>
     <!-- Wedding Details -->
 
 <section class="card">
 
-<h1 class="heading">Wedding Details</h1>
+<div style="text-align:center;">
+
+<div style="
+font-family:'Amiri',serif;
+font-size:30px;
+color:#8b6a2b;
+margin-bottom:10px;
+">
+﷽
+</div>
+
+<h2 class="heading">Wedding Details</h2>
 
 <div class="details">
 
@@ -246,8 +312,12 @@ Together With Their Families
 <a href="https://maps.app.goo.gl/3epFwKpaRCabrRx86"
 target="_blank"
 class="location-btn">
+
 📍 View Location
+
 </a>
+
+</div>
 
 </div>
 
@@ -257,48 +327,38 @@ class="location-btn">
 
 <section class="card">
 
-<h1 class="heading">Countdown</h1>
-
-<h2 id="countdown"
-style="
+<div style="
 text-align:center;
-font-size:34px;
-color:#8b1e46;
-line-height:1.7;
-font-family:'Cinzel',serif;
+border:2px solid #c8a96a;
+border-radius:18px;
+padding:25px;
+background:#fffdf8;
 ">
-Loading...
-</h2>
 
-</section>
-
-<!-- Gallery -->
-
-<section class="card">
-
-<h1 class="heading">Our Moments</h1>
-
-<div class="gallery">
-
-<img src="images/photo1.jpg" alt="Photo 1">
-
-<img src="images/photo2.jpg" alt="Photo 2">
-
-<img src="images/photo3.jpg" alt="Photo 3">
-
-<img src="images/photo4.jpg" alt="Photo 4">
-
+<div style="
+font-family:'Amiri',serif;
+font-size:28px;
+color:#8b1e46;
+margin-bottom:10px;
+">
+العد التنازلي
 </div>
 
-<p style="
-text-align:center;
-margin-top:20px;
-color:#777;
+<h2 class="heading" style="margin-bottom:15px;">
+Wedding Countdown
+</h2>
+
+<div id="countdown"
+style="
+font-size:30px;
+font-weight:600;
+color:#8b1e46;
+line-height:1.8;
 ">
+Loading...
+</div>
 
-Replace these images with your own photos.
-
-</p>
+</div>
 
 </section>
 
@@ -306,85 +366,95 @@ Replace these images with your own photos.
 
 <section class="card">
 
-<h1 class="heading">With Love</h1>
+<div style="text-align:center;">
 
-<p style="
-text-align:center;
-font-size:20px;
-line-height:2;
+<div style="
+font-family:'Amiri',serif;
+font-size:34px;
+color:#8b6a2b;
+margin-bottom:20px;
 ">
 
-With the blessings of Almighty Allah,
+بارك الله لهما وبارك عليهما وجمع بينهما في خير
 
-<br><br>
-
-We request the pleasure of your presence
-to celebrate the wedding of
-
-<br><br>
-
-<b style="color:#8b1e46;">
-Ayisha Hiba
-</b>
-
-<br>
-
-&
-
-<br>
-
-<b style="color:#8b1e46;">
-Muhammed Salah
-</b>
-
-<br><br>
-
-Your presence and blessings
-will make our special day
-even more memorable.
-
-</p>
-
-</section>
-    
-<!-- Thank You -->
-
-<section class="card">
-
-<h1 class="heading">Thank You</h1>
+</div>
 
 <p style="
-text-align:center;
 font-size:20px;
 line-height:2;
 color:#555;
 ">
 
-We are truly grateful for your
-love, prayers and blessings.
+With the blessings of Almighty Allah,
+
+we joyfully invite you and your family
+to celebrate the wedding of
 
 <br><br>
 
-We look forward to celebrating
-our special day with you.
+<span style="color:#8b1e46;font-size:24px;font-weight:600;">
+AYISHA HIBA
+</span>
+
+<br><br>
+
+&
+
+<br><br>
+
+<span style="color:#8b1e46;font-size:24px;font-weight:600;">
+MUHAMMED SALAH
+</span>
+
+<br><br>
+
+Your gracious presence and heartfelt
+blessings will make our celebration
+more joyful and memorable.
 
 </p>
 
-<div style="text-align:center;margin-top:35px;">
-
-<a href="https://maps.app.goo.gl/3epFwKpaRCabrRx86"
-target="_blank"
-class="location-btn">
-
-📍 View Location
-
-</a>
-
 </div>
 
-<div style="text-align:center;margin-top:40px;">
+</section>
+    <!-- Thank You -->
 
-<h2 style="
+<section class="card">
+
+<div style="text-align:center;">
+
+<div style="
+font-family:'Amiri',serif;
+font-size:34px;
+color:#8b6a2b;
+margin-bottom:15px;
+">
+جزاكم الله خيرًا
+</div>
+
+<h2 class="heading">
+Thank You
+</h2>
+
+<p style="
+font-size:20px;
+line-height:2;
+color:#555;
+">
+
+May Allah (SWT) bless you and your family
+with happiness, peace and barakah.
+
+<br><br>
+
+Your prayers and presence
+will make our special day
+even more memorable.
+
+</p>
+
+<div style="
+margin-top:35px;
 font-family:'Cinzel',serif;
 font-size:42px;
 color:#8b1e46;
@@ -392,15 +462,26 @@ color:#8b1e46;
 
 HS
 
-</h2>
+</div>
 
-<p style="font-size:22px;margin-top:10px;">
+<p style="
+margin-top:12px;
+font-size:22px;
+font-weight:600;
+color:#333;
+">
 
-Ayisha Hiba ❤️ Muhammed Salah
+Ayisha Hiba
+<br>❦<br>
+Muhammed Salah
 
 </p>
 
-<p style="margin-top:10px;color:#777;">
+<p style="
+margin-top:10px;
+font-size:18px;
+color:#8b6a2b;
+">
 
 16 August 2026 • 11:00 AM
 
@@ -419,6 +500,11 @@ function openInvitation(){
 document.getElementById("cover").style.display="none";
 document.getElementById("mainContent").style.display="block";
 
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
 }
 
 const weddingDate=new Date("August 16, 2026 11:00:00").getTime();
@@ -429,9 +515,11 @@ const now=new Date().getTime();
 
 const distance=weddingDate-now;
 
-if(distance<0){
+if(distance<=0){
 
-document.getElementById("countdown").innerHTML="💍 The Wedding Day Has Arrived!";
+document.getElementById("countdown").innerHTML=
+"💍 Alhamdulillah! The Wedding Day Has Arrived.";
+
 return;
 
 }
@@ -442,39 +530,136 @@ const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
 const seconds=Math.floor((distance%(1000*60))/1000);
 
 document.getElementById("countdown").innerHTML=
-days+" Days<br>"+
-hours+" Hours "+
-minutes+" Minutes "+
-seconds+" Seconds";
+"<b>"+days+"</b> Days<br>"+
+"<b>"+hours+"</b> Hours &nbsp; "+
+"<b>"+minutes+"</b> Minutes &nbsp; "+
+"<b>"+seconds+"</b> Seconds";
 
 },1000);
 
-const cards=document.querySelectorAll(".card");
+</script>
 
-const observer=new IntersectionObserver((entries)=>{
+</body>
+</html>
+<!-- Thank You -->
 
-entries.forEach(entry=>{
+<section class="card">
 
-if(entry.isIntersecting){
+<div style="text-align:center;">
 
-entry.target.style.opacity="1";
-entry.target.style.transform="translateY(0)";
+<div style="
+font-family:'Amiri',serif;
+font-size:34px;
+color:#8b6a2b;
+margin-bottom:15px;
+">
+جزاكم الله خيرًا
+</div>
+
+<h2 class="heading">
+Thank You
+</h2>
+
+<p style="
+font-size:20px;
+line-height:2;
+color:#555;
+">
+
+May Allah (SWT) bless you and your family
+with happiness, peace and barakah.
+
+<br><br>
+
+Your prayers and presence
+will make our special day
+even more memorable.
+
+</p>
+
+<div style="
+margin-top:35px;
+font-family:'Cinzel',serif;
+font-size:42px;
+color:#8b1e46;
+">
+
+HS
+
+</div>
+
+<p style="
+margin-top:12px;
+font-size:22px;
+font-weight:600;
+color:#333;
+">
+
+Ayisha Hiba
+<br>❦<br>
+Muhammed Salah
+
+</p>
+
+<p style="
+margin-top:10px;
+font-size:18px;
+color:#8b6a2b;
+">
+
+16 August 2026 • 11:00 AM
+
+</p>
+
+</div>
+
+</section>
+
+</div>
+
+<script>
+
+function openInvitation(){
+
+document.getElementById("cover").style.display="none";
+document.getElementById("mainContent").style.display="block";
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }
 
-});
+const weddingDate=new Date("August 16, 2026 11:00:00").getTime();
 
-});
+setInterval(function(){
 
-cards.forEach(card=>{
+const now=new Date().getTime();
 
-card.style.opacity="0";
-card.style.transform="translateY(40px)";
-card.style.transition=".8s";
+const distance=weddingDate-now;
 
-observer.observe(card);
+if(distance<=0){
 
-});
+document.getElementById("countdown").innerHTML=
+"💍 Alhamdulillah! The Wedding Day Has Arrived.";
+
+return;
+
+}
+
+const days=Math.floor(distance/(1000*60*60*24));
+const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+const seconds=Math.floor((distance%(1000*60))/1000);
+
+document.getElementById("countdown").innerHTML=
+"<b>"+days+"</b> Days<br>"+
+"<b>"+hours+"</b> Hours &nbsp; "+
+"<b>"+minutes+"</b> Minutes &nbsp; "+
+"<b>"+seconds+"</b> Seconds";
+
+},1000);
 
 </script>
 
