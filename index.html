@@ -1,603 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Ayisha Hiba & Muhammed Salah | Nikah</title>
 
 <style>
-  
-  .countdown-box{
-background:linear-gradient(135deg,#fff,#fff4d6);
-border:2px solid #d4af37;
-}
-
-.countdown-box h2{
-animation:pulse 2s infinite;
-}
-  
-  .flowers{
-position:fixed;
-top:-20px;
-left:0;
-width:100%;
-font-size:25px;
-word-spacing:40px;
-animation:fall 10s linear infinite;
-pointer-events:none;
-z-index:5;
-}
-
-@keyframes fall{
-0%{
-transform:translateY(-50px);
-opacity:0;
-}
-
-20%{
-opacity:1;
-}
-
-100%{
-transform:translateY(100vh);
-opacity:0;
-}
-}
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Georgia',serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Georgia", serif;
 }
 
 body{
-<div class="flowers">
-🌸 🌸 🌸 🌸 🌸
-</div>
-background:#fff8e7;
-color:#5b4325;
-text-align:center;
-overflow-x:hidden;
+    background:linear-gradient(135deg,#fff1f7,#ffe4ec);
+    color:#4a2635;
+    overflow-x:hidden;
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:20px;
-
-background:
-linear-gradient(rgba(255,248,231,.85),rgba(255,248,231,.95)),
-url("https://images.unsplash.com/photo-1519741497674-611481863552");
-
-background-size:cover;
-background-position:center;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+    animation:fadeIn 2s;
 }
 
-
-.card{
-background:rgba(255,255,255,.95);
-border-radius:35px;
-padding:45px 25px;
-max-width:520px;
-box-shadow:0 15px 40px rgba(184,134,11,.35);
-
-animation:showCard 1.5s ease;
+.container{
+    width:100%;
+    max-width:600px;
 }
-
-
-@keyframes showCard{
-
-from{
-opacity:0;
-transform:translateY(60px) scale(.9);
-}
-
-to{
-opacity:1;
-transform:translateY(0) scale(1);
-}
-
-}
-
-
-/* Flower animation */
-
-.flower{
-font-size:50px;
-animation:float 3s infinite ease-in-out;
-}
-
-
-@keyframes float{
-
-0%,100%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-12px);
-}
-
-}
-
-
-
-.bismillah{
-
-font-size:28px;
-color:#b8860b;
-margin:20px;
-
-animation:fade 2s;
-
-}
-
-
-@keyframes fade{
-
-from{
-opacity:0;
-}
-
-to{
-opacity:1;
-}
-
-}
-
-
-
-h1,h2{
-color:#b8860b;
-}
-
 
 h1{
-font-size:42px;
-letter-spacing:1px;
-animation:textIn 2s;
+    font-size:38px;
+    color:#b76e79;
+    animation:slideDown 2s;
 }
 
-
-
-@keyframes textIn{
-
-from{
-opacity:0;
-letter-spacing:10px;
+.names{
+    margin-top:15px;
+    font-size:25px;
+    color:#7b3f52;
 }
 
-to{
-opacity:1;
-letter-spacing:1px;
+.quote{
+    margin-top:20px;
+    font-size:18px;
+    line-height:1.6;
 }
 
-}
-
-
-
-.and{
-font-size:32px;
-margin:12px;
-color:#8b6b32;
-}
-
-
-p{
-font-size:18px;
-line-height:1.8;
-}
-
-
-.gold{
-color:#b8860b;
-font-weight:bold;
-}
-
-
-/* Sections */
-
-.section{
-padding:35px 20px;
-}
-
-
+/* Boxes */
 
 .box{
+    background:white;
+    margin:25px auto;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.12);
+    animation:up 1.5s;
+}
 
-background:white;
-border-radius:30px;
-padding:30px 20px;
-margin:25px auto;
-max-width:520px;
-
-box-shadow:0 10px 30px rgba(184,134,11,.25);
-
-animation:slide 1s ease;
-
+.box h2{
+    color:#b76e79;
+    margin-bottom:15px;
 }
 
 
+/* Countdown */
 
-@keyframes slide{
-
-from{
-opacity:0;
-transform:translateX(-50px);
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
 }
 
-to{
-opacity:1;
-transform:translateX(0);
+.time{
+    background:#b76e79;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    min-width:75px;
 }
 
-}
-
-
-button{
-
-background:linear-gradient(45deg,#b8860b,#d4af37);
-color:white;
-
-border:none;
-padding:15px 30px;
-
-border-radius:50px;
-font-size:16px;
-
-margin-top:20px;
-
-cursor:pointer;
-
-box-shadow:0 5px 15px rgba(184,134,11,.4);
-
-transition:.3s;
-
+.time span{
+    display:block;
+    font-size:25px;
+    font-weight:bold;
 }
 
 
-button:hover{
+/* Nikah Details */
 
-transform:scale(1.08);
-
+.details p{
+    font-size:18px;
+    margin:10px;
 }
 
 
-#countdown{
+/* Button */
 
-margin-top:25px;
-
-font-size:21px;
-
-font-weight:bold;
-
-color:#b8860b;
-
-animation:pulse 2s infinite;
-
+.music-btn{
+    background:#b76e79;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:16px;
 }
 
 
-@keyframes pulse{
+/* Animations */
 
-50%{
-transform:scale(1.05);
+@keyframes fadeIn{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
 }
 
+@keyframes slideDown{
+    from{
+        transform:translateY(-50px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
 
-
-footer{
-
-background:#b8860b;
-
-color:white;
-
-padding:30px;
-
-font-size:18px;
-
+@keyframes up{
+    from{
+        transform:translateY(40px);
+        opacity:0;
+    }
+    to{
+        transform:translateY(0);
+        opacity:1;
+    }
 }
 
 
 </style>
-  
+
 </head>
 
 <body>
 
 <section class="hero">
 
-<div class="card">
+<div class="container">
 
-<div class="flower">🌸</div>
+<h1>بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</h1>
 
-<div class="bismillah">
-بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+<div class="names">
+    Ayisha Hiba ❤️<br>
+    &<br>
+    Muhammed Salah
 </div>
 
-
-<p>Together with their families</p>
-
-<br>
-
-<h1>Ayisha Hiba</h1>
-
-<div class="and">&</div>
-
-<h1>Muhammed Salah</h1>
-
-
-<br>
-
-
-<p>
-Invite you to their
-<br>
-
-<span class="gold">
-Nikah Ceremony
-</span>
-
+<p class="quote">
+"Two souls, one heart and a beautiful journey begins..."
 </p>
 
 
-<br>
-
+<!-- Countdown Box -->
 
 <div class="box">
 
-<h2>💍 Nikah Date & Time</h2>
+<h2>Countdown</h2>
 
-<br>
+<div class="countdown">
 
-<p>
-📅 16 August 2026
-<br>
-⏰ 11:00 AM
-</p>
+<div class="time">
+<span id="days">00</span>
+Days
+</div>
+
+<div class="time">
+<span id="hours">00</span>
+Hours
+</div>
+
+<div class="time">
+<span id="minutes">00</span>
+Minutes
+</div>
+
+<div class="time">
+<span id="seconds">00</span>
+Seconds
+</div>
+
+</div>
+
+</div>
+<!-- MUSIC SECTION -->
+<div class="music-box">
+<h2>🎵 Our Special Song</h2>
+
+<audio controls autoplay loop>
+<source src="song.mp3" type="audio/mpeg">
+</audio>
 
 </div>
 
 
-<div class="box countdown-box">
+<!-- COUNTDOWN SECTION -->
+<div class="countdown-box">
 
 <h2>⏳ Countdown</h2>
 
-<br>
-
-<div id="countdown">
-Loading...
-</div>
+<div id="countdown"></div>
 
 </div>
 
 
-<div id="countdown">
-Loading...
-</div>
-
-
-</div>
-
-</section>
-
-
-
-<section class="section">
-
-
-<div class="box">
+<!-- NIKAH DETAILS -->
+<div class="details-box">
 
 <h2>💍 Nikah Details</h2>
 
-<br>
-
 <p>
-
-Date: 16 August 2026
-
-<br>
-
-Time: 11:00 AM
-
+📅 Date: 25 December 2026
 </p>
 
+<p>
+⏰ Time: 12:00 PM
+</p>
+
+<p>
+📍 Venue: Your Venue Name
+</p>
 
 </div>
 
 
-
-
-<div class="box">
-
-
-<h2>📍 Venue</h2>
-
-<br>
-
-
-<p>
-
-LUXOTICA INTERNATIONAL
-<br>
-
-CONVENTION CENTRE
-
-</p>
-
-
-
-<button onclick="openMap()">
-
-Open Location
-
-</button>
-
-
-</div>
-
-
-
-
-<div class="box">
-
-
-<h2>💌 RSVP</h2>
-
-<br>
-
-<p>
-Confirm your presence
-</p>
-
-
-
-<button onclick="rsvp()">
-
-WhatsApp RSVP
-
-</button>
-
-
-</div>
-
-
-
-</section>
-
-
-
-
-<footer>
-
-With love & blessings ❤️
-
-</footer>
-
-
-
-
-
+<!-- ANIMATION SCRIPT -->
 <script>
 
-
-let weddingDate =
-
-new Date("August 16, 2026 11:00:00").getTime();
-
-
+let nikahDate = new Date("December 25, 2026 12:00:00").getTime();
 
 let timer = setInterval(function(){
 
-
 let now = new Date().getTime();
 
-
-let distance = weddingDate - now;
-
+let distance = nikahDate - now;
 
 
-if(distance < 0){
+let days = Math.floor(distance/(1000*60*60*24));
 
-document.getElementById("countdown").innerHTML =
-"Alhamdulillah ❤️ The Day Has Arrived";
+let hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
 
-clearInterval(timer);
+let minutes = Math.floor((distance%(1000*60*60))/(1000*60));
 
-return;
-
-}
-
-
-
-let days =
-Math.floor(distance/(1000*60*60*24));
-
-
-
-let hours =
-Math.floor(
-(distance%(1000*60*60*24))/(1000*60*60)
-);
-
-
-
-let minutes =
-Math.floor(
-(distance%(1000*60*60))/(1000*60)
-);
-
-
-
-let seconds =
-Math.floor(
-(distance%(1000*60))/1000
-);
-
+let seconds = Math.floor((distance%(1000*60))/1000);
 
 
 document.getElementById("countdown").innerHTML =
-
-days+" Days "
-+hours+" Hours "
-+minutes+" Minutes "
-+seconds+" Seconds";
-
+days+" Days "+hours+" Hours "+minutes+" Minutes "+seconds+" Seconds";
 
 
 },1000);
 
-
-
-
-
-function openMap(){
-
-
-window.open(
-
-"https://maps.google.com/?q=LUXOTICA+INTERNATIONAL+CONVENTION+CENTRE"
-
-);
-
-
-}
-
-
-
-
-
-function rsvp(){
-
-
-let msg =
-
-"Assalamu Alaikum 😊\n\nI would like to attend the Nikah of Ayisha Hiba & Muhammed Salah on 16 August 2026.";
-
-
-
-window.open(
-
-"https://wa.me/?text="+encodeURIComponent(msg)
-
-);
-
-
-}
-
-
-
 </script>
 
 
-
 </body>
-
 </html>
+  
