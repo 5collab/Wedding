@@ -1,68 +1,39 @@
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", function(){
 
-const openBtn=document.getElementById("openInvitation");
+    const pages = document.querySelectorAll(".page");
 
-openBtn.onclick=()=>{
-document.getElementById("page2").scrollIntoView({
-behavior:"smooth"
-});
-};
+    function showPage(id){
 
+        pages.forEach(page=>{
+            page.classList.remove("active");
+        });
 
-document.querySelectorAll(".next-btn").forEach(btn=>{
+        document.getElementById(id).classList.add("active");
 
-btn.onclick=()=>{
-
-let page=btn.dataset.next;
-
-document.getElementById(page).scrollIntoView({
-behavior:"smooth"
-});
-
-};
-
-});
+        window.scrollTo(0,0);
+    }
 
 
-document.getElementById("replayInvitation").onclick=()=>{
-
-document.getElementById("cover").scrollIntoView({
-behavior:"smooth"
-});
-
-};
+    document.getElementById("openInvitation").onclick=function(){
+        showPage("page2");
+    };
 
 
+    document.querySelectorAll(".next-btn").forEach(button=>{
 
-let target=new Date("August 16, 2026 11:00:00").getTime();
+        button.onclick=function(){
 
+            let nextPage=this.dataset.next;
 
-setInterval(()=>{
+            showPage(nextPage);
 
-let now=new Date().getTime();
-let diff=target-now;
+        };
 
-
-if(diff<0)return;
-
-
-document.getElementById("days").innerHTML=
-Math.floor(diff/(1000*60*60*24));
+    });
 
 
-document.getElementById("hours").innerHTML=
-Math.floor((diff%(1000*60*60*24))/(1000*60*60));
-
-
-document.getElementById("minutes").innerHTML=
-Math.floor((diff%(1000*60*60))/(1000*60));
-
-
-document.getElementById("seconds").innerHTML=
-Math.floor((diff%(1000*60))/1000);
-
-
-},1000);
-
+    document.getElementById("replayInvitation").onclick=function(){
+        showPage("cover");
+    };
 
 });
