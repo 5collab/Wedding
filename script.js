@@ -1,148 +1,88 @@
-document.addEventListener("DOMContentLoaded", function(){
+/* ==========================================
+   WEDDING INVITATION SCRIPT
+========================================== */
 
+document.addEventListener("DOMContentLoaded", function () {
 
-const pages = document.querySelectorAll(".page");
+    const pages = document.querySelectorAll(".page");
 
+    // Show selected page
+    window.showPage = function (id) {
 
-// Show selected page
+        pages.forEach(page => {
+            page.classList.remove("active");
+        });
 
-function showPage(id){
+        document.getElementById(id).classList.add("active");
 
-    pages.forEach(page => {
-
-        page.classList.remove("active");
-
-    });
-
-
-    document.getElementById(id).classList.add("active");
-
-
-    window.scrollTo(0,0);
-
-}
-
-
-
-// Tap To Open Button
-
-const openButton = document.getElementById("openInvitation");
-
-
-if(openButton){
-
-    openButton.onclick = function(){
-
-        showPage("page2");
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
 
     };
 
-}
+    // Open Invitation Button
+    const openBtn = document.getElementById("openInvitation");
 
+    if (openBtn) {
 
+        openBtn.addEventListener("click", function () {
 
-// Continue buttons
+            showPage("page2");
 
-const nextButtons = document.querySelectorAll(".next-btn");
-
-
-let currentPage = 2;
-
-
-nextButtons.forEach(button => {
-
-
-    button.onclick = function(){
-
-
-        currentPage++;
-
-
-        if(currentPage <= 5){
-
-            showPage("page" + currentPage);
-
-        }
-
-
-    };
-
-
-});
-
-
-
-});
-// =========================
-// WEDDING COUNTDOWN
-// =========================
-
-
-const weddingDate = new Date("August 16, 2026 11:00:00").getTime();
-
-
-const countdown = document.getElementById("countdown");
-
-
-function updateCountdown(){
-
-
-    if(!countdown) return;
-
-
-
-    const now = new Date().getTime();
-
-
-    const distance = weddingDate - now;
-
-
-
-    if(distance < 0){
-
-        countdown.innerHTML = "The Wedding Day Has Arrived ❤️";
-
-        return;
+        });
 
     }
 
+});
 
+/* ==========================================
+   OPTIONAL COUNTDOWN
+   (Add this only if you have a countdown box)
+========================================== */
+
+const weddingDate = new Date("August 16, 2026 11:00:00").getTime();
+
+const timer = setInterval(function () {
+
+    const now = new Date().getTime();
+
+    const distance = weddingDate - now;
+
+    if (distance < 0) {
+
+        clearInterval(timer);
+
+        const countdown = document.getElementById("countdown");
+
+        if (countdown) {
+            countdown.innerHTML = "💍 Today is the Nikkah!";
+        }
+
+        return;
+    }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
 
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) /
+        (1000 * 60 * 60));
 
-    const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) /
-        (1000 * 60 * 60)
-    );
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) /
+        (1000 * 60));
 
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    const minutes = Math.floor(
-        (distance % (1000 * 60 * 60)) /
-        (1000 * 60)
-    );
+    const countdown = document.getElementById("countdown");
 
+    if (countdown) {
 
-    const seconds = Math.floor(
-        (distance % (1000 * 60)) /
-        1000
-    );
+        countdown.innerHTML =
+            days + " Days " +
+            hours + " Hours " +
+            minutes + " Minutes " +
+            seconds + " Seconds";
 
+    }
 
-
-    countdown.innerHTML =
-
-    days + " Days " +
-    hours + " Hours " +
-    minutes + " Minutes " +
-    seconds + " Seconds";
-
-
-}
-
-
-
-updateCountdown();
-
-
-setInterval(updateCountdown,1000);
+}, 1000);
