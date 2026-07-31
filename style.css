@@ -1,12 +1,6 @@
-/* ===========================
-   Google Fonts
-=========================== */
-
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&family=Amiri:wght@400;700&display=swap');
-
-/* ===========================
-   Reset
-=========================== */
+/* =========================
+   RESET
+========================= */
 
 *{
     margin:0;
@@ -14,573 +8,708 @@
     box-sizing:border-box;
 }
 
-html{
-    scroll-behavior:smooth;
-}
 
 body{
-    margin:0;
-    padding:0;
-    font-family:'Poppins',sans-serif;
-    background:#0b0b0b;
-    color:#fff;
-    overflow-x:hidden;
-    overflow-y:auto;
-}
-
-.stars{
-    position:fixed;
-    inset:0;
-    background-image:
-    radial-gradient(#ffd978 1px,transparent 1px);
-    background-size:40px 40px;
-    opacity:.25;
-    animation:starsMove 25s linear infinite;
-    z-index:-2;
-}
-
-@keyframes starsMove{
-
-0%{
-transform:translateY(0);
-}
-
-100%{
-transform:translateY(60px);
-}
-
-}
-
-.lanterns{
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:-1;
-}
-
-/* ===========================
- Pages
-=========================== */
-
-.page{
-    display:none;
-}
-
-.page.active{
-    display:block;
-}
-
-.container{
-width:100%;
-max-width:900px;
-margin:auto;
-text-align:center;
-}
-
-@keyframes fade{
-
-from{
-opacity:0;
-transform:translateY(30px);
-}
-
-to{
-opacity:1;
-transform:translateY(0);
-}
-
-}
-
-/* ===========================
- Cover
-=========================== */
-
-.gold-border{
-    position:absolute;
-    inset:18px;
-    border:2px solid rgba(255,215,120,.7);
-    border-radius:22px;
-    pointer-events:none;
-    z-index:1;
-}
-
-.cover-content{
-    position:relative;
-    z-index:5;
-
-    width:100%;
-    max-width:900px;
-    margin:0 auto;
 
     min-height:100vh;
 
-    display:flex;
-    flex-direction:column;
+    background:#f8f0df;
+
+    font-family:'Poppins',sans-serif;
+
+    overflow-x:hidden;
+
+}
+
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+
+.page{
+
+    display:none;
+
+    min-height:100vh;
+
+    width:100%;
+
     justify-content:center;
+
     align-items:center;
 
-    text-align:center;
-
-    padding:20px;
-}
-
-.invite-title{
-
-font-family:'Cinzel',serif;
-font-size:42px;
-color:#f8d56d;
-letter-spacing:3px;
-margin-bottom:20px;
+    padding:25px;
 
 }
 
-.couple-name{
 
-font-family:'Cormorant Garamond',serif;
-font-size:62px;
-font-weight:700;
-line-height:1.2;
-color:white;
+.page.active{
+
+    display:flex;
+
+    animation:fadeIn 1s ease;
 
 }
 
-.couple-name span{
 
-display:block;
-font-size:36px;
-color:#f6cf63;
-margin:12px 0;
 
-  }
-/* ===========================
- Arabic Text
-=========================== */
+@keyframes fadeIn{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+
+
+/* =========================
+   OPENING PAGE
+========================= */
+
+
+.open-page{
+
+
+background:
+
+linear-gradient(
+
+rgba(255,248,230,0.82),
+
+rgba(255,248,230,0.82)
+
+),
+
+url("https://images.unsplash.com/photo-1519741497674-611481863552");
+
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+
+.open-box{
+
+
+width:100%;
+
+max-width:430px;
+
+
+padding:45px 25px;
+
+
+text-align:center;
+
+
+background:rgba(255,255,255,0.75);
+
+
+border:3px solid #b08d57;
+
+
+border-radius:25px;
+
+
+box-shadow:0 10px 35px rgba(0,0,0,0.15);
+
+
+position:relative;
+
+
+}
+
+
+
+.open-box:before,
+.open-box:after{
+
+
+content:"✦";
+
+
+position:absolute;
+
+
+font-size:35px;
+
+
+color:#b08d57;
+
+
+}
+
+
+
+.open-box:before{
+
+top:10px;
+
+left:15px;
+
+}
+
+
+.open-box:after{
+
+bottom:10px;
+
+right:15px;
+
+}
+
+
+
+
+/* =========================
+   TEXT STYLE
+========================= */
+
 
 .arabic{
-    font-family:'Amiri',serif;
-    font-size:30px;
-    color:#f8d56d;
-    margin-bottom:20px;
-    line-height:1.8;
+
+
+font-family:'Amiri',serif;
+
+
+font-size:32px;
+
+
+color:#8b6b2f;
+
+
+margin-bottom:20px;
+
+
 }
 
-.arabic-big{
-    font-family:'Amiri',serif;
-    font-size:38px;
-    color:#ffd978;
-    margin:30px 0;
-    line-height:1.8;
+
+
+.open-title{
+
+
+font-family:'Cinzel',serif;
+
+
+font-size:32px;
+
+
+font-weight:700;
+
+
+color:#5a3d1e;
+
+
+margin-bottom:15px;
+
+
 }
 
-.verse{
-    max-width:700px;
-    margin:25px auto;
-    font-size:18px;
-    color:#ddd;
-    line-height:1.8;
+
+
+.names{
+
+
+font-family:'Cormorant Garamond',serif;
+
+
+font-size:30px;
+
+
+font-weight:700;
+
+
+color:#8b6b2f;
+
+
+line-height:1.2;
+
+
 }
 
-.quran{
-    color:#d6b04b;
-    margin-bottom:35px;
-    font-style:italic;
-}
 
-/* ===========================
- Buttons
-=========================== */
+
+/* =========================
+   BUTTONS
+========================= */
+
 
 .open-btn,
 .next-btn,
 .location-btn{
 
-display:inline-block;
-margin-top:25px;
-padding:16px 40px;
 
-border:2px solid #d4af37;
+margin-top:30px;
+
+
+padding:14px 35px;
+
+
+border:none;
+
+
 border-radius:40px;
 
-background:rgba(212,175,55,.12);
 
-color:#fff;
-text-decoration:none;
+background:#8b6b2f;
 
-font-size:18px;
-font-weight:600;
+
+color:white;
+
+
+font-size:16px;
+
+
+font-family:'Poppins',sans-serif;
+
 
 cursor:pointer;
 
-transition:.4s;
 
-backdrop-filter:blur(10px);
+text-decoration:none;
+
+
+display:inline-block;
+
+
+transition:0.3s;
+
 
 }
+
+
 
 .open-btn:hover,
 .next-btn:hover,
 .location-btn:hover{
 
-background:#d4af37;
-color:#111;
 
-transform:translateY(-5px);
+transform:scale(1.05);
 
-box-shadow:
-0 0 15px rgba(255,215,120,.6),
-0 0 40px rgba(255,215,120,.3);
+
+}
+/* =========================
+   INVITATION CARD
+========================= */
+
+
+.invitation-box{
+
+
+width:100%;
+
+max-width:450px;
+
+
+padding:35px 25px;
+
+
+text-align:center;
+
+
+background:#fffaf0;
+
+
+border:3px solid #b08d57;
+
+
+border-radius:25px;
+
+
+box-shadow:0 10px 35px rgba(0,0,0,0.12);
+
+
+position:relative;
+
 
 }
 
-/* ===========================
- Detail Boxes
-=========================== */
 
-.details-grid{
 
-display:grid;
+.invitation-box:before,
+.invitation-box:after{
 
-grid-template-columns:
-repeat(auto-fit,minmax(220px,1fr));
 
-gap:22px;
+content:"❈";
 
-margin-top:40px;
 
-}
+position:absolute;
 
-.detail-box{
 
-background:rgba(255,255,255,.08);
+font-size:35px;
 
-border:1px solid rgba(255,215,120,.35);
 
-border-radius:18px;
+color:#b08d57;
 
-padding:30px 20px;
-
-transition:.4s;
-
-backdrop-filter:blur(14px);
 
 }
 
-.detail-box:hover{
 
-transform:translateY(-8px);
 
-box-shadow:
-0 0 20px rgba(255,215,120,.25);
+.invitation-box:before{
+
+top:10px;
+
+left:15px;
 
 }
 
-.detail-box h3{
+
+
+.invitation-box:after{
+
+bottom:10px;
+
+right:15px;
+
+}
+
+
+
+
+
+/* =========================
+   HEADINGS
+========================= */
+
+
+.heading{
+
 
 font-family:'Cinzel',serif;
 
-font-size:22px;
 
-margin:15px 0;
+font-size:28px;
 
-color:#ffd978;
+
+font-weight:600;
+
+
+color:#7b5727;
+
+
+margin-bottom:15px;
+
 
 }
 
-.detail-box p{
+
+
+.verse{
+
+
+font-family:'Amiri',serif;
+
+
+font-size:25px;
+
+
+color:#6b4a23;
+
+
+line-height:1.8;
+
+
+margin:20px 0;
+
+
+}
+
+
+
+.details{
+
+
+font-size:16px;
+
+
+line-height:2;
+
+
+color:#4b3520;
+
+
+}
+
+
+
+
+
+/* =========================
+   DECORATIONS
+========================= */
+
+
+.decor{
+
+
+font-size:28px;
+
+
+color:#b08d57;
+
+
+margin:15px;
+
+
+}
+
+
+
+.gold-line{
+
+
+height:2px;
+
+
+width:80%;
+
+
+background:#b08d57;
+
+
+margin:20px auto;
+
+
+}
+
+
+
+
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+
+.countdown-box{
+
+
+margin-top:25px;
+
+
+padding:20px;
+
+
+border:2px solid #b08d57;
+
+
+border-radius:18px;
+
+
+background:#fff8e8;
+
+
+}
+
+
+
+.countdown-title{
+
+
+font-family:'Cinzel',serif;
+
+
+font-size:20px;
+
+
+color:#7b5727;
+
+
+}
+
+
+
+#countdown{
+
+
+margin-top:15px;
+
 
 font-size:17px;
 
-line-height:1.7;
+
+font-weight:600;
+
+
+color:#5a3d1e;
+
 
 }
 
-.icon{
 
-font-size:32px;
 
-display:block;
 
-}
 
-/* ===========================
- Countdown
-=========================== */
+/* =========================
+   LOCATION
+========================= */
 
-.count-title{
 
-margin-top:60px;
+.location-box{
 
-font-family:'Cinzel',serif;
 
-font-size:34px;
+margin-top:25px;
 
-color:#ffd978;
 
-}
+padding:20px;
 
-.countdown{
 
-display:flex;
+border:2px solid #b08d57;
 
-justify-content:center;
-
-gap:18px;
-
-flex-wrap:wrap;
-
-margin-top:30px;
-
-}
-
-.count-box{
-
-width:110px;
-
-padding:25px 10px;
 
 border-radius:18px;
 
-background:rgba(255,255,255,.08);
 
-border:1px solid rgba(255,215,120,.4);
+background:#fffaf0;
 
-backdrop-filter:blur(10px);
-
-transition:.3s;
 
 }
 
-.count-box:hover{
 
-transform:scale(1.08);
 
-box-shadow:0 0 18px rgba(255,215,120,.35);
+.location-title{
 
-}
 
-.count-box span{
+font-family:'Cinzel',serif;
 
-display:block;
 
-font-size:42px;
+font-size:23px;
 
-font-weight:bold;
 
-color:#ffd978;
+color:#7b5727;
+
 
 }
 
-.count-box small{
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+
+@media(max-width:480px){
+
+
+.page{
+
+padding:15px;
+
+}
+
+
+
+.open-box,
+.invitation-box{
+
+
+padding:30px 15px;
+
+
+}
+
+
+
+.arabic{
+
+
+font-size:27px;
+
+
+}
+
+
+
+.open-title{
+
+
+font-size:26px;
+
+
+}
+
+
+
+.names{
+
+
+font-size:25px;
+
+
+}
+
+
+
+.heading{
+
+
+font-size:23px;
+
+
+}
+
+
+
+.verse{
+
+
+font-size:21px;
+
+
+}
+
+
+
+.details{
+
 
 font-size:15px;
 
-letter-spacing:1px;
-
-}
-/* ===========================
-   Closing Page
-=========================== */
-
-.thank-title{
-    font-family:'Cinzel',serif;
-    font-size:42px;
-    color:#ffd978;
-    margin-bottom:25px;
-}
-
-.closing-message{
-    max-width:700px;
-    margin:25px auto;
-    line-height:2;
-    font-size:18px;
-    color:#eee;
-}
-
-.love{
-    margin-top:35px;
-    color:#ffd978;
-    font-size:28px;
-    font-family:'Cormorant Garamond',serif;
-}
-
-.couple-end{
-    margin-top:20px;
-    font-size:46px;
-    line-height:1.5;
-    font-family:'Cormorant Garamond',serif;
-    color:#fff;
-}
-
-/* ===========================
-   Animations
-=========================== */
-
-@keyframes float{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-12px);}
-    100%{transform:translateY(0);}
-}
-
-.open-btn{
-    animation:float 3s ease-in-out infinite;
-}
-
-.detail-box,
-.count-box{
-    animation:fadeUp 0.8s ease both;
-}
-
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(35px);
-    }
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-/* ===========================
-   Mobile Responsive
-=========================== */
-
-@media (max-width:768px){
-
-    .invite-title{
-        font-size:28px;
-    }
-
-    .couple-name{
-        font-size:42px;
-    }
-
-    .arabic-big{
-        font-size:28px;
-    }
-
-    .detail-box{
-        padding:22px 15px;
-    }
-
-    .count-box{
-        width:78px;
-        padding:18px 8px;
-    }
-
-    .count-box span{
-        font-size:30px;
-    }
-
-    .open-btn,
-    .next-btn,
-    .location-btn{
-        width:100%;
-        max-width:300px;
-        font-size:17px;
-    }
-
-    .couple-end{
-        font-size:34px;
-    }
-
-}
-
-/* ===========================
-   Scrollbar
-=========================== */
-
-::-webkit-scrollbar{
-    width:8px;
-}
-
-::-webkit-scrollbar-track{
-    background:#111;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#caa63a;
-    border-radius:10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#f3d36d;
-}
-/* Force Cover Center */
-
-#cover{
-    display:flex !important;
-    justify-content:center !important;
-    align-items:center !important;
-}
-
-#cover .cover-content{
-    width:100%;
-    max-width:900px;
-    margin:auto !important;
-    text-align:center !important;
-}
-
-#cover .cover-content > *{
-    width:100%;
-    text-align:center !important;
-}
-/* Mobile Bride Groom & Nikkah Title Fix */
-
-.section-title{
-    font-family:'Cinzel',serif;
-    font-size:32px;
-    font-weight:700;
-    color:#ffd978;
-    text-align:center;
-    margin-bottom:25px;
-}
-
-.bride,
-.groom{
-    font-family:'Cormorant Garamond',serif;
-    font-size:38px;
-    font-weight:700;
-    line-height:1.3;
-    color:#fff;
-    text-align:center;
-}
-
-@media(max-width:768px){
-
-    .section-title{
-        font-size:28px;
-    }
-
-    .bride,
-    .groom{
-        font-size:34px;
-    }
-
-}
-/* Bigger Elegant Headings */
-
-.invite-title,
-.section-title{
-
-    font-family:'Cinzel',serif;
-    font-size:48px;
-    font-weight:700;
-    color:#ffd978;
-    letter-spacing:3px;
-    text-align:center;
 
 }
 
 
-@media(max-width:768px){
 
-    .invite-title,
-    .section-title{
+.countdown-title{
 
-        font-size:32px;
-        letter-spacing:1px;
 
-    }
+font-size:18px;
+
+
+}
+
+
+
+#countdown{
+
+
+font-size:15px;
+
+
+}
+
 
 }
