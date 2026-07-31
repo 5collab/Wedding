@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
         document.getElementById(id).classList.add("active");
 
-        window.scrollTo(0,0);
     }
 
 
