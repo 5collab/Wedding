@@ -112,27 +112,17 @@ transform:translateY(0);
 =========================== */
 
 .gold-border{
-
-position:absolute;
-top:18px;
-left:18px;
-right:18px;
-bottom:18px;
-
-border:2px solid rgba(255,215,120,.7);
-border-radius:22px;
-
-box-shadow:
-0 0 15px rgba(255,215,120,.25),
-0 0 40px rgba(255,215,120,.08);
-
+    position:absolute;
+    inset:18px;
+    border:2px solid rgba(255,215,120,.7);
+    border-radius:22px;
+    pointer-events:none;
+    z-index:1;
 }
 
 .cover-content{
-
-text-align:center;
-padding:40px;
-
+    position:relative;
+    z-index:5;
 }
 
 .invite-title{
