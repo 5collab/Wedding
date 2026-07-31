@@ -1,6 +1,12 @@
-/* =========================
+/* ==========================================
+   GOOGLE FONTS
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap');
+
+/* ==========================================
    RESET
-========================= */
+========================================== */
 
 *{
     margin:0;
@@ -8,753 +14,701 @@
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body{
 
-    min-height:100vh;
-
-    background:#f8f0df;
-
     font-family:'Poppins',sans-serif;
-
+    background:#f8f2e8;
+    color:#3d2c16;
     overflow-x:hidden;
 
 }
 
-
-
-/* =========================
+/* ==========================================
    PAGE SYSTEM
-========================= */
-
+========================================== */
 
 .page{
 
     display:none;
-
     min-height:100vh;
-
     width:100%;
+    padding:30px 18px;
 
     justify-content:center;
-
     align-items:center;
 
-    padding:25px;
+    background:
+    radial-gradient(circle at top,#fff8ec,#f4e8d2);
 
 }
 
-
 .page.active{
+    display:flex;
+}
+
+/* ==========================================
+   INVITATION BOX
+========================================== */
+
+.invitation-box{
+
+    width:100%;
+    max-width:700px;
+
+    background:rgba(255,255,255,.92);
+
+    border:2px solid #d4af37;
+
+    border-radius:25px;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    box-shadow:
+    0 12px 35px rgba(0,0,0,.12);
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+/* Gold Border Decoration */
+
+.invitation-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:1px solid rgba(212,175,55,.45);
+
+    border-radius:18px;
+
+    pointer-events:none;
+
+}
+
+/* ==========================================
+   HS LOGO
+========================================== */
+
+.hs-logo{
+
+    width:90px;
+    height:90px;
+
+    margin:auto;
+
+    border-radius:50%;
+
+    border:3px solid #d4af37;
 
     display:flex;
 
-    animation:fadeIn 1s ease;
+    align-items:center;
+    justify-content:center;
+
+    font-family:'Cinzel',serif;
+
+    font-size:38px;
+    font-weight:700;
+
+    color:#b8892d;
+
+    margin-bottom:20px;
+
+    background:#fffaf2;
 
 }
 
+/* ==========================================
+   BISMILLAH
+========================================== */
 
+.bismillah{
 
-@keyframes fadeIn{
+    font-size:48px;
 
-from{
+    color:#b8892d;
 
-    opacity:0;
-
-    transform:translateY(20px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateY(0);
+    margin-bottom:20px;
 
 }
 
-}
+.bismillah.big{
 
-
-
-/* =========================
-   OPENING PAGE
-========================= */
-
-
-.open-page{
-
-
-background:
-
-linear-gradient(
-
-rgba(255,248,230,0.82),
-
-rgba(255,248,230,0.82)
-
-),
-
-url("https://images.unsplash.com/photo-1519741497674-611481863552");
-
-
-background-size:cover;
-
-background-position:center;
+    font-size:62px;
 
 }
 
+/* ==========================================
+   HEADINGS
+========================================== */
 
+.couple-name{
 
+    font-family:'Cinzel',serif;
 
-.open-box{
+    font-size:34px;
 
+    color:#7d5b1f;
 
-width:100%;
-
-max-width:430px;
-
-
-padding:45px 25px;
-
-
-text-align:center;
-
-
-background:rgba(255,255,255,0.75);
-
-
-border:3px solid #b08d57;
-
-
-border-radius:25px;
-
-
-box-shadow:0 10px 35px rgba(0,0,0,0.15);
-
-
-position:relative;
-
+    margin:10px 0;
 
 }
 
+.and{
 
+    font-size:30px;
 
-.open-box:before,
-.open-box:after{
+    color:#c9a13c;
 
-
-content:"✦";
-
-
-position:absolute;
-
-
-font-size:35px;
-
-
-color:#b08d57;
-
+    margin:8px 0;
 
 }
 
+.section-title{
 
+    font-family:'Cinzel',serif;
 
-.open-box:before{
+    font-size:30px;
 
-top:10px;
+    color:#7a5716;
 
-left:15px;
-
-}
-
-
-.open-box:after{
-
-bottom:10px;
-
-right:15px;
+    margin-bottom:25px;
 
 }
 
+/* ==========================================
+   TEXT
+========================================== */
 
+.invitation-text{
 
+    font-size:17px;
 
-/* =========================
-   TEXT STYLE
-========================= */
+    color:#666;
 
-
-.arabic{
-
-
-font-family:'Amiri',serif;
-
-
-font-size:32px;
-
-
-color:#8b6b2f;
-
-
-margin-bottom:20px;
-
+    margin-bottom:15px;
 
 }
 
+.invite-line{
 
+    margin-top:20px;
 
-.open-title{
+    font-size:17px;
 
+    line-height:1.8;
 
-font-family:'Cinzel',serif;
-
-
-font-size:32px;
-
-
-font-weight:700;
-
-
-color:#5a3d1e;
-
-
-margin-bottom:15px;
-
+    color:#555;
 
 }
 
-/* Return Back To Home Box */
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.main-btn,
+.next-btn,
+.location-btn,
+.return-home-btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:14px 36px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#c89b2c;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.main-btn:hover,
+.next-btn:hover,
+.location-btn:hover,
+.return-home-btn:hover{
+
+    background:#a97b18;
+
+    transform:translateY(-3px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.18);
+
+}
+/* ==========================================
+   PAGE 2 - ARABIC THEME
+========================================== */
+
+.arabic-heading{
+
+    font-family:'Amiri',serif;
+    font-size:32px;
+    color:#8a6518;
+    direction:rtl;
+    line-height:1.8;
+    margin-bottom:25px;
+
+}
+
+.arabic-verse{
+
+    font-family:'Amiri',serif;
+    font-size:30px;
+    direction:rtl;
+    line-height:2.1;
+    color:#3f2b16;
+
+    background:#fffaf2;
+
+    border:1px solid rgba(212,175,55,.5);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin-bottom:20px;
+
+}
+
+.translation{
+
+    font-size:16px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    font-style:italic;
+
+    margin-bottom:18px;
+
+}
+
+.reference{
+
+    color:#b8892d;
+
+    font-weight:600;
+
+    margin-bottom:30px;
+
+}
+
+.dua-ar{
+
+    font-family:'Amiri',serif;
+
+    font-size:28px;
+
+    direction:rtl;
+
+    color:#7a5716;
+
+    margin-bottom:12px;
+
+}
+
+.dua-eng{
+
+    font-size:15px;
+
+    color:#666;
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+/* ==========================================
+   PAGE 3 - DETAILS
+========================================== */
+
+.detail-box{
+
+    background:#fffdf9;
+
+    border:2px solid rgba(212,175,55,.45);
+
+    border-radius:18px;
+
+    padding:22px;
+
+    margin-bottom:25px;
+
+    transition:.35s;
+
+}
+
+.detail-box:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.detail-box h3{
+
+    font-family:'Cinzel',serif;
+
+    color:#8a6518;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+}
+
+.detail-box p{
+
+    font-size:16px;
+
+    color:#555;
+
+    line-height:1.9;
+
+    margin:8px 0;
+
+}
+
+.detail-box strong{
+
+    color:#7a5716;
+
+}
+
+/* ==========================================
+   GOLD DIVIDER
+========================================== */
+
+.gold-divider{
+
+    width:120px;
+
+    height:2px;
+
+    background:#d4af37;
+
+    margin:30px auto;
+
+}
+
+/* ==========================================
+   SMALL FADE ANIMATION
+========================================== */
+
+.invitation-box{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+/* ==========================================
+   PAGE 4 - LOCATION
+========================================== */
+
+.location-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    text-decoration:none;
+
+    background:#c89b2c;
+
+    color:#fff;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.location-btn:hover{
+
+    background:#a97b18;
+
+    transform:translateY(-3px);
+
+}
+
+.next-btn{
+
+    margin-top:20px;
+
+}
+
+/* ==========================================
+   PAGE 5 - THANK YOU
+========================================== */
+
+.thank-message{
+
+    font-size:17px;
+
+    color:#555;
+
+    line-height:2;
+
+    margin:25px 0;
+
+}
+
+.dua-box{
+
+    background:#fffaf2;
+
+    border:2px solid rgba(212,175,55,.45);
+
+    border-radius:18px;
+
+    padding:20px;
+
+    margin:30px 0;
+
+}
+
+.couple-sign{
+
+    margin-top:30px;
+
+}
+
+.couple-sign h3{
+
+    font-family:'Cinzel',serif;
+
+    color:#7a5716;
+
+    font-size:28px;
+
+    line-height:1.8;
+
+}
+
+/* ==========================================
+   RETURN HOME
+========================================== */
 
 .return-home-box{
-    margin:40px auto;
-    text-align:center;
+
+    margin-top:35px;
+
 }
 
 .return-home-btn{
-    display:inline-block;
+
     padding:15px 35px;
-    border:2px solid #d4af37;
-    border-radius:30px;
-    background:rgba(255,255,255,0.08);
+
+}
+
+/* ==========================================
+   DECORATIVE GOLD CORNERS
+========================================== */
+
+.invitation-box::after{
+
+    content:"❈";
+
+    position:absolute;
+
+    top:12px;
+
+    right:18px;
+
     color:#d4af37;
-    font-family:'Cinzel',serif;
-    font-size:18px;
-    text-decoration:none;
-    transition:0.3s;
+
+    font-size:22px;
+
+    opacity:.7;
+
 }
 
-.return-home-btn:hover{
+.section-title::after{
+
+    content:"";
+
+    display:block;
+
+    width:90px;
+
+    height:2px;
+
     background:#d4af37;
-    color:#111;
-}
 
-.names{
-
-
-font-family:'Cormorant Garamond',serif;
-
-
-font-size:30px;
-
-
-font-weight:700;
-
-
-color:#8b6b2f;
-
-
-line-height:1.2;
-
+    margin:12px auto 0;
 
 }
 
-
-
-/* =========================
-   BUTTONS
-========================= */
-
-
-.open-btn,
-.next-btn,
-.location-btn{
-
-
-margin-top:30px;
-
-
-padding:14px 35px;
-
-
-border:none;
-
-
-border-radius:40px;
-
-
-background:#8b6b2f;
-
-
-color:white;
-
-
-font-size:16px;
-
-
-font-family:'Poppins',sans-serif;
-
-
-cursor:pointer;
-
-
-text-decoration:none;
-
-
-display:inline-block;
-
-
-transition:0.3s;
-
-
-}
-
-
-
-.open-btn:hover,
-.next-btn:hover,
-.location-btn:hover{
-
-
-transform:scale(1.05);
-
-
-}
-/* =========================
-   INVITATION CARD
-========================= */
-
-
-.invitation-box{
-
-
-width:100%;
-
-max-width:450px;
-
-
-padding:35px 25px;
-
-
-text-align:center;
-
-
-background:#fffaf0;
-
-
-border:3px solid #b08d57;
-
-
-border-radius:25px;
-
-
-box-shadow:0 10px 35px rgba(0,0,0,0.12);
-
-
-position:relative;
-
-
-}
-
-
-
-.invitation-box:before,
-.invitation-box:after{
-
-
-content:"❈";
-
-
-position:absolute;
-
-
-font-size:35px;
-
-
-color:#b08d57;
-
-
-}
-
-
-
-.invitation-box:before{
-
-top:10px;
-
-left:15px;
-
-}
-
-
-
-.invitation-box:after{
-
-bottom:10px;
-
-right:15px;
-
-}
-
-
-
-
-
-/* =========================
-   HEADINGS
-========================= */
-
-
-.heading{
-
-
-font-family:'Cinzel',serif;
-
-
-font-size:28px;
-
-
-font-weight:600;
-
-
-color:#7b5727;
-
-
-margin-bottom:15px;
-
-
-}
-
-
-
-.verse{
-
-
-font-family:'Amiri',serif;
-
-
-font-size:25px;
-
-
-color:#6b4a23;
-
-
-line-height:1.8;
-
-
-margin:20px 0;
-
-
-}
-
-
-
-.details{
-
-
-font-size:16px;
-
-
-line-height:2;
-
-
-color:#4b3520;
-
-
-}
-
-
-
-
-
-/* =========================
-   DECORATIONS
-========================= */
-
-
-.decor{
-
-
-font-size:28px;
-
-
-color:#b08d57;
-
-
-margin:15px;
-
-
-}
-
-
-
-.gold-line{
-
-
-height:2px;
-
-
-width:80%;
-
-
-background:#b08d57;
-
-
-margin:20px auto;
-
-
-}
-
-
-
-
-
-/* =========================
-   COUNTDOWN
-========================= */
-
-
-.countdown-box{
-
-
-margin-top:25px;
-
-
-padding:20px;
-
-
-border:2px solid #b08d57;
-
-
-border-radius:18px;
-
-
-background:#fff8e8;
-
-
-}
-
-
-
-.countdown-title{
-
-
-font-family:'Cinzel',serif;
-
-
-font-size:20px;
-
-
-color:#7b5727;
-
-
-}
-
-
-
-#countdown{
-
-
-margin-top:15px;
-
-
-font-size:17px;
-
-
-font-weight:600;
-
-
-color:#5a3d1e;
-
-
-}
-
-
-
-
-
-/* =========================
-   LOCATION
-========================= */
-
-
-.location-box{
-
-
-margin-top:25px;
-
-
-padding:20px;
-
-
-border:2px solid #b08d57;
-
-
-border-radius:18px;
-
-
-background:#fffaf0;
-
-
-}
-
-
-
-.location-title{
-
-
-font-family:'Cinzel',serif;
-
-
-font-size:23px;
-
-
-color:#7b5727;
-
-
-}
-
-
-
-
-
-/* =========================
+/* ==========================================
    MOBILE RESPONSIVE
-========================= */
+========================================== */
 
+@media (max-width:768px){
 
-@media(max-width:480px){
-
-
-.page{
-
-padding:15px;
-
-}
-
-
-
-.open-box,
 .invitation-box{
 
-
-padding:30px 15px;
-
+    padding:28px 18px;
 
 }
 
+.hs-logo{
 
-
-.arabic{
-
-
-font-size:27px;
-
+    width:75px;
+    height:75px;
+    font-size:30px;
 
 }
 
+.bismillah{
 
-
-.open-title{
-
-
-font-size:26px;
-
+    font-size:40px;
 
 }
 
+.bismillah.big{
 
-
-.names{
-
-
-font-size:25px;
-
+    font-size:50px;
 
 }
 
+.couple-name{
 
-
-.heading{
-
-
-font-size:23px;
-
+    font-size:26px;
 
 }
 
+.section-title{
 
-
-.verse{
-
-
-font-size:21px;
-
+    font-size:24px;
 
 }
 
+.arabic-heading{
 
-
-.details{
-
-
-font-size:15px;
-
+    font-size:24px;
 
 }
 
+.arabic-verse{
 
+    font-size:24px;
 
-.countdown-title{
-
-
-font-size:18px;
-
+    line-height:2;
 
 }
 
+.dua-ar{
 
-
-#countdown{
-
-
-font-size:15px;
-
+    font-size:24px;
 
 }
 
+.detail-box h3{
+
+    font-size:20px;
 
 }
-/* Return Back To Home Box */
-.continue-box{
-    margin-top:20px;
-    text-align:center;
+
+.detail-box p{
+
+    font-size:15px;
+
 }
 
-.continue-btn{
-    background:#b8892d;
-    color:#fff;
-    border:none;
-    padding:14px 35px;
-    border-radius:40px;
+.main-btn,
+.next-btn,
+.location-btn,
+.return-home-btn{
+
+    width:100%;
+
     font-size:16px;
-    cursor:pointer;
-    transition:.3s;
+
 }
 
-.continue-btn:hover{
-    background:#9a6f1e;
-    transform:translateY(-2px);
 }
 
+/* ==========================================
+   GOLD GLOW ANIMATION
+========================================== */
+
+@keyframes glow{
+
+0%{
+
+box-shadow:0 0 5px rgba(212,175,55,.2);
+
+}
+
+50%{
+
+box-shadow:0 0 18px rgba(212,175,55,.5);
+
+}
+
+100%{
+
+box-shadow:0 0 5px rgba(212,175,55,.2);
+
+}
+
+}
+
+.hs-logo{
+
+    animation:glow 3s infinite;
+
+}
+
+/* ==========================================
+   END
+========================================== */
