@@ -76,23 +76,8 @@ z-index:-1;
 =========================== */
 
 .page{
-    display:none;
-    position:relative;
-
-    width:100%;
+    display:flex;
     min-height:100vh;
-
-    justify-content:center;
-    align-items:center;
-
-    padding:20px;
-    overflow:hidden;
-
-    animation:fade .8s ease;
-}
-
-.page.active{
-display:flex;
 }
 
 .container{
