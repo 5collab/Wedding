@@ -759,10 +759,4 @@ font-size:15px;
 .return-home-btn:hover{
     background:#d4af37;
     color:#111;
-   }
-
-<div class="return-home-box">
-    <a href="#" class="return-home-btn" onclick="showPage('page1'); return false;">
-        ⬅ Return Back to Home
-    </a>
-</div>
+}
