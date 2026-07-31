@@ -24,7 +24,8 @@ body{
     font-family:'Poppins',sans-serif;
     background:#0b0b0b;
     color:#fff;
-    overflow-x:hidden;
+    overflow-x:hidden
+    overflow:hidden;
 }
 
 /* ===========================
