@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-    // Tap To Open - scroll to page 2
+    // Tap To Open
     document.getElementById("openInvitation").onclick = function(){
 
         document.getElementById("page2").scrollIntoView({
@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function(){
     };
 
 
-    // Continue buttons - scroll to next page
+    // Continue Buttons
     document.querySelectorAll(".next-btn").forEach(button=>{
 
         button.onclick = function(){
 
-            const nextPage = this.getAttribute("data-next");
+            let nextPage = this.getAttribute("data-next");
 
             document.getElementById(nextPage).scrollIntoView({
                 behavior:"smooth"
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 
-    // View Again - scroll back to cover
+    // View Again Button
     document.getElementById("replayInvitation").onclick = function(){
 
         document.getElementById("cover").scrollIntoView({
@@ -37,32 +37,25 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     // Countdown
-    const weddingDate = new Date("August 16, 2026 11:00:00").getTime();
+    let weddingDate = new Date("August 16, 2026 11:00:00").getTime();
 
 
     setInterval(function(){
 
-        const now = new Date().getTime();
-        const distance = weddingDate - now;
+        let now = new Date().getTime();
+        let distance = weddingDate - now;
 
 
-        if(distance < 0) return;
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
 
-        document.getElementById("days").innerHTML =
-        Math.floor(distance / (1000*60*60*24));
-
-
-        document.getElementById("hours").innerHTML =
-        Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-
-
-        document.getElementById("minutes").innerHTML =
-        Math.floor((distance % (1000*60*60)) / (1000*60));
-
-
-        document.getElementById("seconds").innerHTML =
-        Math.floor((distance % (1000*60)) / 1000);
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
 
 
     },1000);
