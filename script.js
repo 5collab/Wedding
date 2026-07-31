@@ -1,64 +1,68 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded",()=>{
 
-    // Tap To Open
-    document.getElementById("openInvitation").onclick = function(){
+const openBtn=document.getElementById("openInvitation");
 
-        document.getElementById("page2").scrollIntoView({
-            behavior:"smooth"
-        });
-
-    };
-
-
-    // Continue Buttons
-    document.querySelectorAll(".next-btn").forEach(button=>{
-
-        button.onclick = function(){
-
-            let nextPage = this.getAttribute("data-next");
-
-            document.getElementById(nextPage).scrollIntoView({
-                behavior:"smooth"
-            });
-
-        };
-
-    });
+openBtn.onclick=()=>{
+document.getElementById("page2").scrollIntoView({
+behavior:"smooth"
+});
+};
 
 
-    // View Again Button
-    document.getElementById("replayInvitation").onclick = function(){
+document.querySelectorAll(".next-btn").forEach(btn=>{
 
-        document.getElementById("cover").scrollIntoView({
-            behavior:"smooth"
-        });
+btn.onclick=()=>{
 
-    };
+let page=btn.dataset.next;
 
+document.getElementById(page).scrollIntoView({
+behavior:"smooth"
+});
 
-    // Countdown
-    let weddingDate = new Date("August 16, 2026 11:00:00").getTime();
+};
 
-
-    setInterval(function(){
-
-        let now = new Date().getTime();
-        let distance = weddingDate - now;
+});
 
 
-        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+document.getElementById("replayInvitation").onclick=()=>{
+
+document.getElementById("cover").scrollIntoView({
+behavior:"smooth"
+});
+
+};
 
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
+
+let target=new Date("August 16, 2026 11:00:00").getTime();
 
 
-    },1000);
+setInterval(()=>{
+
+let now=new Date().getTime();
+let diff=target-now;
+
+
+if(diff<0)return;
+
+
+document.getElementById("days").innerHTML=
+Math.floor(diff/(1000*60*60*24));
+
+
+document.getElementById("hours").innerHTML=
+Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+
+
+document.getElementById("minutes").innerHTML=
+Math.floor((diff%(1000*60*60))/(1000*60));
+
+
+document.getElementById("seconds").innerHTML=
+Math.floor((diff%(1000*60))/1000);
+
+
+},1000);
 
 
 });
