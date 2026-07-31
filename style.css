@@ -24,24 +24,8 @@ body{
     font-family:'Poppins',sans-serif;
     background:#0b0b0b;
     color:#fff;
-    overflow-x:hidden
     overflow:hidden;
 }
-
-/* ===========================
-   Background
-=========================== */
-
-body::before{
-    content:"";
-    position:fixed;
-    inset:0;
-    background:
-    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
-    url("assets/background.jpg") center/cover no-repeat;
-    z-index:-3;
-}
-
 .stars{
     position:fixed;
     inset:0;
