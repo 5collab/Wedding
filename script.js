@@ -10,19 +10,22 @@ document.addEventListener("DOMContentLoaded", function(){
 
         document.getElementById(id).classList.add("active");
 
+        window.scrollTo(0,0);
     }
 
 
-    document.getElementById("openInvitation").onclick=function(){
+    // Tap to Continue button
+    document.getElementById("openInvitation").onclick = function(){
         showPage("page2");
     };
 
 
+    // All Continue buttons
     document.querySelectorAll(".next-btn").forEach(button=>{
 
-        button.onclick=function(){
+        button.onclick = function(){
 
-            let nextPage=this.dataset.next;
+            let nextPage = this.getAttribute("data-next");
 
             showPage(nextPage);
 
@@ -31,8 +34,12 @@ document.addEventListener("DOMContentLoaded", function(){
     });
 
 
-    document.getElementById("replayInvitation").onclick=function(){
+    // View Again button
+    document.getElementById("replayInvitation").onclick = function(){
+
         showPage("cover");
+
     };
+
 
 });
