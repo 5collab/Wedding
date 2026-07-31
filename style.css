@@ -19,6 +19,8 @@ html{
 }
 
 body{
+    margin:0;
+    padding:0;
     font-family:'Poppins',sans-serif;
     background:#0b0b0b;
     color:#fff;
@@ -74,12 +76,19 @@ z-index:-1;
 =========================== */
 
 .page{
-display:none;
-min-height:100vh;
-padding:70px 20px;
-justify-content:center;
-align-items:center;
-animation:fade .8s ease;
+    display:none;
+    position:relative;
+
+    width:100%;
+    min-height:100vh;
+
+    justify-content:center;
+    align-items:center;
+
+    padding:20px;
+    overflow:hidden;
+
+    animation:fade .8s ease;
 }
 
 .page.active{
@@ -123,6 +132,21 @@ transform:translateY(0);
 .cover-content{
     position:relative;
     z-index:5;
+
+    width:100%;
+    max-width:900px;
+    margin:0 auto;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:20px;
 }
 
 .invite-title{
