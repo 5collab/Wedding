@@ -583,3 +583,29 @@ letter-spacing:1px;
     }
 
 }
+/* Bigger Elegant Headings */
+
+.invite-title,
+.section-title{
+
+    font-family:'Cinzel',serif;
+    font-size:48px;
+    font-weight:700;
+    color:#ffd978;
+    letter-spacing:3px;
+    text-align:center;
+
+}
+
+
+@media(max-width:768px){
+
+    .invite-title,
+    .section-title{
+
+        font-size:32px;
+        letter-spacing:1px;
+
+    }
+
+}
