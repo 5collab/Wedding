@@ -1,84 +1,519 @@
+/* ===========================
+   Google Fonts
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;600;700&family=Amiri:wght@400;700&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:'Poppins',sans-serif;
-background:linear-gradient(to bottom,#ffffff,#fdf8f5);
-color:#5b1d28;
-overflow-x:hidden;
+    font-family:'Poppins',sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    overflow-x:hidden;
 }
 
-#loader{
-height:100vh;
-display:flex;
-flex-direction:column;
+/* ===========================
+   Background
+=========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
+    url("assets/background.jpg") center/cover no-repeat;
+    z-index:-3;
+}
+
+.stars{
+    position:fixed;
+    inset:0;
+    background-image:
+    radial-gradient(#ffd978 1px,transparent 1px);
+    background-size:40px 40px;
+    opacity:.25;
+    animation:starsMove 25s linear infinite;
+    z-index:-2;
+}
+
+@keyframes starsMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(60px);
+}
+
+}
+
+.lanterns{
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:-1;
+}
+
+/* ===========================
+ Pages
+=========================== */
+
+.page{
+display:none;
+min-height:100vh;
+padding:70px 20px;
 justify-content:center;
 align-items:center;
-background:white;
+animation:fade .8s ease;
+}
+
+.page.active{
+display:flex;
+}
+
+.container{
+width:100%;
+max-width:900px;
+margin:auto;
 text-align:center;
 }
 
-#loader h1{
-font-family:'Cinzel',serif;
-font-size:32px;
-color:#8d1f3d;
-margin-bottom:15px;
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(30px);
 }
 
-#loader p{
-font-size:16px;
-color:#777;
+to{
+opacity:1;
+transform:translateY(0);
 }
 
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+}
+
+/* ===========================
+ Cover
+=========================== */
+
+.gold-border{
+
+position:absolute;
+top:18px;
+left:18px;
+right:18px;
+bottom:18px;
+
+border:2px solid rgba(255,215,120,.7);
+border-radius:22px;
+
+box-shadow:
+0 0 15px rgba(255,215,120,.25),
+0 0 40px rgba(255,215,120,.08);
+
+}
+
+.cover-content{
+
 text-align:center;
-padding:20px;
-background:
-linear-gradient(rgba(255,255,255,.82),rgba(255,255,255,.82)),
-url("https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1400&auto=format&fit=crop");
-background-size:cover;
-background-position:center;
+padding:40px;
+
 }
 
-.hero h3{
-letter-spacing:3px;
-font-weight:300;
-margin-bottom:20px;
-}
+.invite-title{
 
-.hero h1{
 font-family:'Cinzel',serif;
 font-size:42px;
-margin:10px 0;
-color:#8d1f3d;
+color:#f8d56d;
+letter-spacing:3px;
+margin-bottom:20px;
+
 }
 
-.hero p{
-font-size:28px;
-margin:15px;
-}
+.couple-name{
 
-#openBtn{
-margin-top:30px;
-padding:14px 38px;
-border:none;
-border-radius:50px;
-background:#8d1f3d;
+font-family:'Cormorant Garamond',serif;
+font-size:62px;
+font-weight:700;
+line-height:1.2;
 color:white;
-font-size:16px;
-cursor:pointer;
-transition:.3s;
+
 }
 
-#openBtn:hover{
-transform:scale(1.05);
-background:#651328;
-                }
+.couple-name span{
+
+display:block;
+font-size:36px;
+color:#f6cf63;
+margin:12px 0;
+
+  }
+/* ===========================
+ Arabic Text
+=========================== */
+
+.arabic{
+    font-family:'Amiri',serif;
+    font-size:30px;
+    color:#f8d56d;
+    margin-bottom:20px;
+    line-height:1.8;
+}
+
+.arabic-big{
+    font-family:'Amiri',serif;
+    font-size:38px;
+    color:#ffd978;
+    margin:30px 0;
+    line-height:1.8;
+}
+
+.verse{
+    max-width:700px;
+    margin:25px auto;
+    font-size:18px;
+    color:#ddd;
+    line-height:1.8;
+}
+
+.quran{
+    color:#d6b04b;
+    margin-bottom:35px;
+    font-style:italic;
+}
+
+/* ===========================
+ Buttons
+=========================== */
+
+.open-btn,
+.next-btn,
+.location-btn{
+
+display:inline-block;
+margin-top:25px;
+padding:16px 40px;
+
+border:2px solid #d4af37;
+border-radius:40px;
+
+background:rgba(212,175,55,.12);
+
+color:#fff;
+text-decoration:none;
+
+font-size:18px;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.4s;
+
+backdrop-filter:blur(10px);
+
+}
+
+.open-btn:hover,
+.next-btn:hover,
+.location-btn:hover{
+
+background:#d4af37;
+color:#111;
+
+transform:translateY(-5px);
+
+box-shadow:
+0 0 15px rgba(255,215,120,.6),
+0 0 40px rgba(255,215,120,.3);
+
+}
+
+/* ===========================
+ Detail Boxes
+=========================== */
+
+.details-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+
+gap:22px;
+
+margin-top:40px;
+
+}
+
+.detail-box{
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,215,120,.35);
+
+border-radius:18px;
+
+padding:30px 20px;
+
+transition:.4s;
+
+backdrop-filter:blur(14px);
+
+}
+
+.detail-box:hover{
+
+transform:translateY(-8px);
+
+box-shadow:
+0 0 20px rgba(255,215,120,.25);
+
+}
+
+.detail-box h3{
+
+font-family:'Cinzel',serif;
+
+font-size:22px;
+
+margin:15px 0;
+
+color:#ffd978;
+
+}
+
+.detail-box p{
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+.icon{
+
+font-size:32px;
+
+display:block;
+
+}
+
+/* ===========================
+ Countdown
+=========================== */
+
+.count-title{
+
+margin-top:60px;
+
+font-family:'Cinzel',serif;
+
+font-size:34px;
+
+color:#ffd978;
+
+}
+
+.countdown{
+
+display:flex;
+
+justify-content:center;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+margin-top:30px;
+
+}
+
+.count-box{
+
+width:110px;
+
+padding:25px 10px;
+
+border-radius:18px;
+
+background:rgba(255,255,255,.08);
+
+border:1px solid rgba(255,215,120,.4);
+
+backdrop-filter:blur(10px);
+
+transition:.3s;
+
+}
+
+.count-box:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 0 18px rgba(255,215,120,.35);
+
+}
+
+.count-box span{
+
+display:block;
+
+font-size:42px;
+
+font-weight:bold;
+
+color:#ffd978;
+
+}
+
+.count-box small{
+
+font-size:15px;
+
+letter-spacing:1px;
+
+}
+/* ===========================
+   Closing Page
+=========================== */
+
+.thank-title{
+    font-family:'Cinzel',serif;
+    font-size:42px;
+    color:#ffd978;
+    margin-bottom:25px;
+}
+
+.closing-message{
+    max-width:700px;
+    margin:25px auto;
+    line-height:2;
+    font-size:18px;
+    color:#eee;
+}
+
+.love{
+    margin-top:35px;
+    color:#ffd978;
+    font-size:28px;
+    font-family:'Cormorant Garamond',serif;
+}
+
+.couple-end{
+    margin-top:20px;
+    font-size:46px;
+    line-height:1.5;
+    font-family:'Cormorant Garamond',serif;
+    color:#fff;
+}
+
+/* ===========================
+   Animations
+=========================== */
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+}
+
+.open-btn{
+    animation:float 3s ease-in-out infinite;
+}
+
+.detail-box,
+.count-box{
+    animation:fadeUp 0.8s ease both;
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ===========================
+   Mobile Responsive
+=========================== */
+
+@media (max-width:768px){
+
+    .invite-title{
+        font-size:28px;
+    }
+
+    .couple-name{
+        font-size:42px;
+    }
+
+    .arabic-big{
+        font-size:28px;
+    }
+
+    .detail-box{
+        padding:22px 15px;
+    }
+
+    .count-box{
+        width:78px;
+        padding:18px 8px;
+    }
+
+    .count-box span{
+        font-size:30px;
+    }
+
+    .open-btn,
+    .next-btn,
+    .location-btn{
+        width:100%;
+        max-width:300px;
+        font-size:17px;
+    }
+
+    .couple-end{
+        font-size:34px;
+    }
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-track{
+    background:#111;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#caa63a;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#f3d36d;
+}
