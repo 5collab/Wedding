@@ -737,4 +737,24 @@ font-size:15px;
 
 }
 /* Return Back To Home Box */
+.continue-box{
+    margin-top:20px;
+    text-align:center;
+}
+
+.continue-btn{
+    background:#b8892d;
+    color:#fff;
+    border:none;
+    padding:14px 35px;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.continue-btn:hover{
+    background:#9a6f1e;
+    transform:translateY(-2px);
+}
 
